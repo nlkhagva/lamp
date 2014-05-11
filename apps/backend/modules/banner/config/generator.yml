@@ -1,0 +1,43 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Banner
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          banner
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        label : Үйлдэл
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+
+      fields:
+        name:            { label: Нэр }
+        file_name:       { label: Файл }
+        link:            { label: Линк }
+        partner:         { label: Parhner }
+        position_id:     { label: Байрлал }
+        order_id:        { label: Дэс дугаар }
+        published:       { label: "Нийтлэх?" }
+      list:
+        title:   Баннер Жагсаалт 
+        display: [name,published, BannerPosition]
+
+      filter:
+        display: [name, position_id]
+      form:   ~
+      edit:
+        title: Баннер засварлах хэсэг
+      new:
+        title: Шинэ баннер үүсгэх
+

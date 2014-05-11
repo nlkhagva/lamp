@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd" >
+<xliff version="1.0">
+  <file original="global" source-language="en" target-language="mn" datatype="plaintext">
+    <header />
+    <body>
+      <trans-unit id="1">
+        <source>Ajouter des images</source>
+        <target>Зураг нэмэх </target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Body</source>
+        <target>Body</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Edition</source>
+        <target>Засварлах</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>galleries</source>
+        <target>Зургийн цомгууд</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>backend.edit.title</source>
+        <target>Зургийн цомог засах</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Please wait...</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>backend.photo.input.title.label</source>
+        <target>Гарчиг</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>backend.photo.input.path.label</source>
+        <target>Зураг</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>uploader.label</source>
+        <target>Зурагнууд нэмэх</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>uploader.drop.label</source>
+        <target>Drop files here to upload</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>backend.action.edit.setdefault</source>
+        <target>Use this picture as cover photo</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>backend.action.edit</source>
+        <target>Засах</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>backend.action.remove</source>
+        <target>Устгах</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>slideshow.index.title</source>
+        <target>Цомгийн жагсаалт</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>slideshow.index.empty</source>
+        <target>No gallery available</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>backend.gallery.nophotos</source>
+        <target>No pictures available</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>backend.action.greyscale</source>
+        <target>Greyscale this picture</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>backend.action.colorize</source>
+        <target>Colorize this picture</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>backend.action.flip.vertical</source>
+        <target>Босоогоор нь эргүүлэх</target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>backend.action.flip.horizontal</source>
+        <target>Хөндлөнгөөр нь эргүүлэх</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>backend.action.rotate.left</source>
+        <target>Зүүн эргүүлэх</target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>backend.action.rotate.right</source>
+        <target>Баруун эргүүлэх</target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>backend.action.crop</source>
+        <target>Crop this picture</target>
+      </trans-unit>
+      <trans-unit id="24">
+        <source>backend.action.edit.title</source>
+        <target>Зураг засварлах</target>
+      </trans-unit>
+      <trans-unit id="25">
+        <source>backend.action.edit.help</source>
+        <target>Зургийг засварлахыг хүсвэл зураг нь дээр дарна уу</target>
+      </trans-unit>
+      <trans-unit id="26">
+        <source>backend.action.edit.purge</source>
+        <target>Зургийн цомгийн бүх зураг устгах</target>
+      </trans-unit>
+      <trans-unit id="27">
+        <source>backend.action.edit.purge.confirmation</source>
+        <target>Энэ үйлдэл нь зургийн цомгийн бүх зургийг устгана. Бүх зургийг устгах уу?</target>
+      </trans-unit>
+      <trans-unit id="28">
+        <source>backend.create.title</source>
+        <target>Шинэ зургийн цомог үүсгэх</target>
+      </trans-unit>
+      <trans-unit id="29">
+        <source>backend.edit.title</source>
+        <target>Зургийн цомог засварлах</target>
+      </trans-unit>
+      <trans-unit id="30">
+        <source>backend.list.title</source>
+        <target>Зургийн цомгууд</target>
+      </trans-unit>
+      <trans-unit id="31">
+        <source>backend.gallery.photo.description.invite</source>
+        <target>Сонгогдсон зурганд тайлбар оруулна уу</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

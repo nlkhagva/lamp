@@ -1,0 +1,51 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           sfGuardUser
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sf_guard_user
+    with_doctrine_route:   true
+
+    config:
+      actions:
+        label : Үйлдэл
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+      fields:
+        first_name:     { label: "Нэр" }
+        last_name:      { label: "Овог" }
+        email_address:  { label: "И-мэйл" }
+        username:       { label: "Хэрэглэгчийн нэр" }
+        password:       { label: "Нууц үг" }
+        is_active:      { label: "Идэвхжүүлэх?" }
+        is_super_admin: { label: "Супер админ?" }
+        password_again: { label: "Нууц үг (дахин оруулна уу)" }
+        created_at:     { label: "Бүртгүүлсэн огноо" }
+        updated_at:     { label: "Засвар хийсан огноо" }
+        last_login:     { label: "Хамгийн сүүлд нэвтэрсэн" }
+        groups_list:         { label: "Группууд" }
+        permissions_list:    { label: "Хандах эрхүүд" }
+
+      list:
+        title:   Хэрэглэгчид
+        display: [=username, last_login]
+
+      form:
+        class: sfGuardUserAdminForm
+        display:
+          "Хэрэглэгч":                   [first_name, last_name, email_address, username, password, password_again]
+          "Хандах эрх, групп": [is_active, is_super_admin, groups_list, permissions_list]
+
+      edit:
+        title: Хэрэглэгчийн мэдээлэл засах "%%username%%"
+
+      new:
+        title: Шинэ хэрэглэгч бүртгэх

@@ -1,0 +1,40 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Page
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          page_content_page
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        label : Үйлдэл
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+
+      fields:
+        slug:            { label: Slug }
+        category_id:     { label: Ангилал }
+        order_id:        { label: Дэс дугаар }
+        
+      list:
+        title:   Хуудас жагсаалт 
+        display: [title, Category]
+
+      filter:
+        display: [category_id]
+      form:   ~
+      edit:
+        title: "Хуудас хэсэг засварлах"
+      new:
+        title: "Шинэ хуудас үүсгэх"
+

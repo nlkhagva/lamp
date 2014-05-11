@@ -1,0 +1,214 @@
+/* 
+    Document   : photos
+    Created on : 2011-05-25, 22:48:28
+    Author     : leny
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.clear{
+    clear:both;
+}
+
+.picture{
+    float: left;
+    padding: 10px;
+    height: 80px;
+    margin: 5px 0;
+    background: none;
+}
+
+.actions{
+    display: none;
+}
+
+.picture img.basic{
+    height: 50px;
+    max-width:100px;
+}
+
+#default{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: url(/sfMultipleAjaxUploadGalleryPlugin/images/default.png) no-repeat;
+}
+#default:hover{
+    background: url(/sfMultipleAjaxUploadGalleryPlugin/images/default_hover.png) no-repeat;
+}
+
+#pictures_list{
+    clear: both;
+}
+
+#content-inner	{
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 auto 0px auto;
+    padding: 25px 0 30px 0;
+}
+#gallery_content{
+    font-size: 0px;
+    line-height: 0px;
+    min-height: 300px;
+    color: white;
+}
+#gallery_content-table th.sized	{
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    margin: 0;
+    font-size: 0px;
+    line-height: 0px;
+}
+#sf_admin_container tr{
+    background: none;
+}
+#sf_admin_container:hover tr{
+    background: none;
+}
+
+#gallery_content-table-inner	{
+    font-size: 12px;
+    line-height: 12px;
+    padding: 10px 0 20px 0;
+}
+#gallery_tbl-border-top,.tbl-border-top	{
+    line-height: 0;font-size: 0px;
+    height: 15px;
+}
+#gallery_tbl-border-bottom,.tbl-border-bottom	{
+    line-height: 0;font-size: 0px;
+    height: 15px;
+}
+#gallery_tbl-border-left,.tbl-border-left	{
+}
+#gallery_tbl-border-right,.tbl-border-right	{
+}
+#gallery_table-content	{
+    line-height: 16px;
+    margin: 0 10px 10px 10px;
+}
+
+.gallery_topleft {
+    width:15px;
+    height:15px;
+
+}
+.gallery_topright {
+    width:15px;
+    height:15px;
+
+}
+
+.bottomleft {
+    width:15px;
+    height:15px;
+
+}
+.bottomright {
+    width:15px;
+    height:15px;
+}
+#sf_admin_container #pictures_list table{
+    border-collapse: inherit;
+}
+
+#sf_admin_container #pictures_list td,#sf_admin_container #pictures_list th{
+    border: 0;
+    padding: 0;
+}
+
+table.mediumtable{
+    color: black;
+    background-color: #868A8A;
+    width: 100%;
+    margin: 5px;
+}
+
+.mediumtable .tbl-border-top	{
+    line-height: 0;font-size: 0px;
+    height: 15px;
+}
+.mediumtable .tbl-border-bottom	{
+    line-height: 0;font-size: 0px;
+    height: 15px;
+}
+
+.mediumtable .topleft {
+    width:15px;
+    height:15px;
+}
+.mediumtable .topright {
+    width:15px;
+    height:15px;
+}
+
+.mediumtable .bottomleft {
+    width:15px;
+    height:15px;
+}
+.mediumtable .bottomright {
+    width:15px;
+    height:15px;
+}
+
+#photos-list li .picture .actions a { padding: 0; background-image: none; }
+.photo-elt { position: relative; }
+
+#photos-list .contextual {
+    background-color: grey;
+    left: -20px;
+    opacity: 0.75;
+    position: absolute;
+    width: 175px;
+    z-index: 10001;
+    padding: 10px;
+}
+
+#photos-list .defaultPicture .contextual {
+    width: 145px;
+}
+
+#photos-list .contextual a{
+    float: left;
+    font-size: 16px;
+}
+#photos-list .contextual a img{
+    max-height: 16px;
+}
+
+
+.smaugv {
+}
+.smaugv #smaugv-others {
+    margin-top:20px;
+}
+.smaugv #smaugv-others ul {
+    list-style-type:none;
+    overflow:hidden;
+    margin:0;
+}
+.smaugv #smaugv-others ul li {
+    float:left;
+    display:block;
+    margin:10px;
+}
+.smaugv #smaugv-others ul li a {
+    display:block;
+    width:185px;
+    height:170px;
+    background:#464646 center center no-repeat;
+    position:relative;
+}
+.smaugv #smaugv-others ul li a span.alpha60 {
+    color:#fff;
+    font-size:110%;
+    display:block;
+    position: absolute;
+    bottom: 0;
+    padding:10px;
+    width:165px; /* see .smaugv #smaugv-others ul li a width */
+}

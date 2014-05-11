@@ -1,0 +1,7 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/08-Security
+
+index:
+  credentials: [[admin, product-stock-index]]
+new:
+  credentials: [[admin, product-stock-new]]

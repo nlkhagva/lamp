@@ -1,0 +1,11 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;dbname=lamp_db'
+      username: root
+      password: sunshine
+      attributes:
+        DEFAULT_TABLE_TYPE: INNODB
+        DEFAULT_TABLE_CHARSET: utf8
+        DEFAULT_TABLE_COLLATE: utf8_general_ci

@@ -1,0 +1,41 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Video
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          video
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах", confirm: "Та итгэлтэй байна уу?" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+      fields:
+        title:           { label: Гарчиг }
+        description:     { label: Тайлбар }
+        embed_src:       { label: Embed код }
+        image:           { label: Зурагаа сонгоно уу }
+        file_name:       { label: Файлын нэр оруулна уу }
+        section_id:      { label: Секци }
+        category_id:     { label: Ангилал }
+      list:
+        title:   "Видео жагсаалт"
+        display: [ title, description ]
+      filter:
+        display: [ section_id, category_id ]
+      form:
+        display: [ mn, en, _ajax_section_category, embed_src, image, file_name ]
+      edit:
+        title:   "Видео засварлах"
+      new:
+        title:   "Шинээр видео нэмэх хэсэг"
+

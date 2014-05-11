@@ -1,0 +1,39 @@
+Gallery:
+  actAs:
+    Timestampable: ~
+  columns:
+    title:
+      type : string(255)
+    description:
+      type : string
+    is_active: boolean
+    category_id:
+      type: integer(4)
+    section_id:
+      type: integer(4)
+  relations:
+    Category: { onDelete: CASCADE, local: category_id, foreign: id, foreignAlias: Galleries }
+    Section:  { onDelete: CASCADE, local: section_id,  foreign: id, foreignAlias: Galleries }
+    
+
+Photos:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [title]
+      unique: true
+  columns:
+    title:
+      type : string(255)
+    picpath:
+      type : string(255)
+    gallery_id:
+      type : integer(8)
+    order_photo:
+      type: integer(4)
+      default: null
+    is_default:     { type: boolean, default: false }
+  relations:
+    Gallery:
+      local: gallery_id
+      onDelete: CASCADE

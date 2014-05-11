@@ -1,0 +1,36 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ProdContType
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          prod_cont_type
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        label : Үйлдэл
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+
+      fields: ~
+      list:
+        title: Холболтын төрлийн жагсаалт 
+        display: [name, sort_order]
+
+      filter: 
+        display: [  ]
+      form: ~
+      edit:
+        title: "Холболтын төрөл засварлах хэсэг"
+      new:
+        title: "Шинэ холболт үүсгэх"
+

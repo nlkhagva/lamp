@@ -1,0 +1,47 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ShopOrderStatus
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          shop_order_status
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах", confirm: "Та итгэлтэй байна уу?" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+
+      fields:
+        name:            { label: 'Нэр' }
+        description:     { label: 'Тайлбар' }
+        step:            { label: 'Алхам' }
+      list:
+        title:           Захиалгын төлөв жагсаалт
+#        layout:          stacked
+        max_per_page:    15
+        sort:            [ created_at, desc]
+        display:         [ name, step ]
+#        params: |
+#               <h2>%%title%%</h2>
+#               <em>
+#                   %%published%% Секци - %%section%% <br />
+#                   <small>( Ангилалууд - %%categories%% )</small>
+#               </em>
+#               <div>%%intro_text%%</div>
+      filter:
+        display: [ step ]
+
+      form:    ~
+      edit:
+        title: Захиалгын төлөв засах
+      new:
+        title: "Захиалгын төлөв нэмэх"

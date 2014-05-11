@@ -1,0 +1,55 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ShopOrder
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          shop_order
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~
+    config:
+      actions:
+        label : Үйлдэл
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+
+      fields:
+        invoice_number:          { label: Захиалгын дугаар }
+        status_id:               { label: Төлөв }
+        user_id:                 { label: Захиалагч }
+        shipping_fee:            { label: Хүргэлт }
+        remain_amount:           { label: Үлдэгдэл төлбөр }
+        total_amount:            { label: Нийт төлбөр }
+        ShopOrderStatus:         { label: Төлөв }
+        created_at:              { label: Үүссэн огноо } 
+      list:
+        title:   Захиалгууд 
+        display: [invoice_number, ShopOrderStatus, created_at]
+        object_actions:
+          _edit:         { label: "Харах" }
+          _delete:       ~
+      filter:
+        display: [invoice_number, status_id, user_id]
+      form:   ~
+      edit:
+        title: "Захиалга #%%invoice_number%%"
+        display: [ status_id, _infoOrder ]
+      new:
+        title: Шинэ захиалга үүсгэх
+

@@ -1,0 +1,757 @@
+#content
+SectionType:
+  columns:
+    id:              { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    name:            { type: string(100), notnull: true }
+    description:     { type: string(), notnull: false }
+Section:
+  actAs:
+    I18n:
+      fields:        [ name, description ]
+    Timestampable:   ~
+  columns:
+    id:              { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    name:            { type: string(100), notnull: false }
+    description:     { type: string(), notnull: false }
+    published:       { type: boolean, notnull: true, default: '1' }
+    access:          { type: string(50), notnull: true }
+    type_id:         { type: integer(4), notnull: true }
+    order_id:        { type: integer(4), notnull: false }
+    created_by:      { type: integer(4), notnull: true }
+    updated_by:      { type: integer(4), notnull: false }
+  relations:
+    SectionType:     { local: type_id, foreign: id, foreignAlias: Sections }
+Content:
+  actAs:
+    I18n:
+      fields:        [ title, intro_text, full_text, description ]
+    Timestampable:   ~
+  columns:
+    id:              { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    title:           { type: string(200), notnull: false }
+    is_feature:      { type: boolean }
+    published:       { type: boolean, notnull: true, default: '1' }
+    section_id:      { type: integer(4), notnull: true }
+    album_id:        { type: integer, notnull: false }
+    image_name:      { type: string(255), notnull: false }
+    intro_text:      { type: string(), notnull: false }
+    full_text:       { type: string(), notnull: false }
+    created_by:      { type: integer(4), notnull: true }
+    updated_by:      { type: integer(4), notnull: false }
+    rating:          { type: integer(1) }
+    hits:            { type: integer(4), notnull: false }
+    access:          { type: string(50), notnull: true }
+    start_date:      { type: timestamp, notnull: false }
+    end_date:        { type: timestamp, notnull: false }
+    description:     { type: string(), notnull: false }
+    extra:           { type: string(255), notnull: false }
+    order_id:        { type: integer(4) }
+  relations:
+    Section:         { class: Section, local: section_id, foreign: id, foreignAlias: Contents }
+    Gallery:         { local: album_id, foreign: id, foreignAlias: Contents }
+    Categories:      { class: Category, refClass: CategoryContent, local: content_id, foreign: category_id }
+ContentRating:
+  actAs: [ Timestampable ]
+  columns:
+    id:              { type: integer(4), primary: true, autoincrement: true }
+    rating:          { type: integer(1), notnull: true }
+    title:           { type: string(100) }
+    description:     { type: string() }
+    user_id:         { type: integer }
+    content_id:      { type: integer(4) }
+  relations:
+    sfGuardUser:     { local: user_id, foreign: id, foreignAlias: RatingContents, alias: rateUser }
+    Content:         { local: content_id, foreign: id }
+
+Page:
+  actAs:
+    I18n:
+      fields:        [ title, body ]
+    Timestampable:   ~
+  columns:
+    id:              { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    title:           { type: string(255), notnull: true }
+    slug:            { type: string(100) }
+    category_id:     { type: integer(4) }
+    image_name:      { type: string(255) }
+    body:            { type: string() }
+    order_id:        { type: integer(4) }
+  relations:
+    Category:        { local: category_id, foreign: id }
+Category:
+  actAs:
+    I18n:
+      fields:        [ name, description ]
+    Timestampable:   ~
+  columns:
+    id:              { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    name:            { type: string(100), notnull: false }
+    description:     { type: string(), notnull: false }
+    section_id:      { type: integer(4), notnull: true }
+    published:       { type: boolean, notnull: true, default: '1' }
+    access:          { type: string(50), notnull: true }
+    order_id:        { type: integer, notnull: false }
+    created_by:      { type: integer, notnull: true }
+    updated_by:      { type: integer, notnull: false }
+  relations:
+    Section:         { local: section_id, foreign: id, foreignAlias: Categories }
+    Contents:
+      class:         Content
+      refClass:      CategoryContent
+      local:         category_id
+      foreign:       content_id
+CategoryContent:
+  columns:
+    content_id:     { type: integer(4), primary: true }
+    category_id:    { type: integer(4), primary: true }
+  relations:
+    Content:        { foreignAlias: CategoryContents, local: content_id, foreignType: one }
+    Category:       { foreignAlias: CategoryContents, local: category_id, foreignType: one }
+Comment:
+  actAs:
+      Timestampable: ~
+  columns:
+    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    content_id:     { type: integer(4), notnull: true }
+    name:           { type: string(100), notnull: false }
+    email:          { type: string(150), notnull: false }
+    comment_text:   { type: string(), notnull: false }
+    created_by:     { type: integer(4), notnull: false }
+  relations:
+    Content:        { local: content_id, foreign: id, foreignAlias: Comments }
+
+
+
+#video
+Video:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields:       [ title, description ]
+  columns:
+    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    title:          { type: string(100), notnull: true }
+    description:    { type: string(), notnull: false  }
+    section_id:     { type: integer(4), notnull: true }
+    category_id:    { type: integer(4), notnull: true }
+    image:          { type: string(255), notnull: false }
+    file_name:      { type: string(255),notnull: false }
+    is_embed:       { type: boolean, default: '1'  }
+    embed_src:      { type: string(), notnull: false }
+    order_id:       { type: integer(4), notnull: true }
+    published:       { type: boolean, notnull: true, default: '1' }
+    created_by:     { type: integer(4), notnull: false }
+    updated_by:     { type: integer(4), notnull: false }
+  relations:
+    Category:       { local: category_id, foreign: id, foreignAlias: Vidoes }
+    Section:        { local: section_id,  foreign: id, foreignAlias: Vidoes }
+
+#menu
+#BodyPosition:
+#  actAs:
+#    Timestampable:  ~
+#  columns:
+#    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+#    name:           { type: string(255), notnull: true }
+#    slug:           { type: string(255), notnull: false, unique: true }
+#    description:    { type: string(), notnull: false }
+#    extra:          { type: string(255), notnull: true }
+
+#Menu:
+#  actAs:
+#    Timestampable: ~
+#    I18n:
+#      fields:       [ title ]
+#  columns:
+#    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+#    title:          { type: string(100), notnull: true }
+#    slug:           { type: string(255), notnull: false, unique: true }
+#    description:    { type: string(), notnull: false }
+#    position_id:    { type: integer(4), notnull: true }
+#    extra:          { type: string(255), notnull: false }
+#  relations:
+#    BodyPosition:   { local: position_id, foreign: id, foreignAlias: Menus }
+#
+#MenuItem:
+#  actAs:
+#    Timestampable:  ~
+#    I18n:
+#      fields:      [ name ]
+#  columns:
+#    id:            { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+#    name:          { type: string(100), notnull: true }
+#    url:           { type: string(255), notnull: true }
+#    menu_id:       { type: integer(4), notnull: false }
+#    is_link:       { type: boolean, default: '0' }
+#  relations:
+#    Menu:          { local: menu_id, foreign: id, foreignAlias: Items }
+
+#banner
+Banner:
+  actAs:
+    Timestampable:  ~
+  columns:
+    id:             { type: integer(4), primary: true, autoincrement: true }
+    name:           { type: string(100), notnull: true}
+    file_name:      { type: string(255), notnull: true }
+    link:           { type: string(255), notnull: false }
+    partner:        { type: string(255) }
+    position_id:    { type: integer(4), notnull: true }
+    order_id:       { type: integer(4), notnull: true }
+    published:      { type: boolean, notnull: true, default: '1' }
+  relations:
+    BannerPosition: { local: position_id, foreign: id }
+BannerPosition:
+  actAs:
+    Timestampable:  ~
+  columns:
+    id:             { type: integer(4), primary: true, autoincrement: true }
+    name:           { type: string(100), notnull: true }
+    description:    { type: string(255), notnull: true }
+    order_id:       { type: integer(1), notnull: true }
+
+#poll
+PollPosition:
+  actAs:
+    Timestampable: ~
+  columns:
+    id:             { type: integer(4), primary: true, autoincrement: true }
+    name:           { type: string(100), notnull: true }
+    symbol:         { type: string(50) }
+    description:    { type: string(255) }
+Poll:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields:       [ question ]
+  columns:
+    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    question:       { type: string(255), notnull: true }
+    order_id:       { type: integer(4), notnull: false }
+    position_id:    { type: integer(4), notnull: false }
+    published:      { type: boolean, notnull: true, default: '1' }
+    frequency:      { type: integer(4), default: '86400' }
+    created_by:     { type: integer(4), notnull: false }
+    updated_by:     { type: integer(4), notnull: false }
+  relations:
+    PollPosition:   { local: position_id, foreign: id, foreignAlias: Polls }
+PollData:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields:       [ answer ]
+  columns:
+    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    answer:         { type: string(255), notnull: true }
+    created_by:     { type: integer(4), notnull: false }
+    poll_id:        { type: integer(4), notnull: true }
+    order_id:       { type: integer(4), notnull: false }
+    vote_count:     { type: integer(4), default: '0' }
+    published:      { type: boolean, notnull: true, default: '1' }
+  relations:
+    Poll:           { local: poll_id, foreign: id, foreignAlias: PollDatas }
+PollDate:
+  actAs:
+    Timestampable: ~
+  columns:
+    poll_id:        { type: integer(4), notnull: true }
+    answer_id:      { type: integer(4), notnull: true }
+    ip_address:     { type: string(100), notnull: true }
+    user_id:        { type: integer(4) }
+  relations:
+    Poll:           { local: poll_id, foreign: id, foreignAlias: PollDates }
+    PollAnswer:     { local: answer_id, foreign: id, foreignAlias: AnswerDates }
+
+#feedback
+Feedback:
+  actAs:
+    Timestampable:  ~
+  columns:
+    id:            { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    title:         { type: string(100), notnull: true }
+    body:          { type: string(), notnull: true }
+    name:          { type: string(100) }
+    phone:         { type: string(50) }
+    email:         { type: string(100) }
+    ip_address:    { type: string(100), notnull: true }
+    is_read:       { type: boolean, default: '0' }
+    user_id:       { type: integer }
+  relations:
+    sfGuardUser:   { local: user_id, foreign: id }
+
+Email:
+  actAs:
+    Timestampable: ~
+  columns:
+    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    email:          { type: string(255), notnull: true }
+    subscribe:      { type: integer(4), default: '1', notnull: true }
+    extra:          { type: string(100) }
+WebsiteConfig:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields:       [ company_name, address, company_slogan ]
+  columns:
+    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    company_name:   { type: string(100) }
+    logo:           { type: string(255) }
+    company_slogan: { type: string(255) }
+    phone:          { type: string(255) }
+    fax:            { type: string(100) }
+    email:          { type: string(100) }
+    address:        { type: string() }
+    google_map:     { type: string() }
+    domain:         { type: string(255) }
+    facebook_page:  { type: string(255) }
+    twitter:        { type: string(255) }
+    google_plus:    { type: string(255) }
+    linkedin:       { type: string(255) }
+
+
+# shop system
+ShopCategory:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields:       [name, description]
+  columns:
+    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    name:           { type: string(100), notnull: true }
+    description:    { type: string(255) }
+    parent_id:      { type: integer(4) }
+    sort_order:     { type: integer(1) }
+  relations:
+    Options:        { class: ShopOption, refClass: ShopCategoryOptionConn, local: category_id, foreign: option_id }
+    Category:       { class: ShopCategory, local: parent_id, foreign: id, alias: Parent, foreignAlias: Childs }
+ShopOption:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields:       [name,description]
+  columns:
+    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    name:           { type: string(100), notnull: true }
+    description:    { type: string(255) }
+    type:           { type: enum, values: ['selectbox', 'checkbox', 'textarea', 'input'] }
+    sort_order:     { type: integer(1) }
+  relations:
+    Categories:     { class: ShopCategory, refClass: ShopCategoryOptionConn, local: option_id, foreign: category_id }
+ShopOptionValue:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields:       [name]
+  columns:
+    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    option_id:      { type: integer(4) }
+    name:           { type: string(100), notnull: true }
+    image_name:     { type: string(255) }
+    sort_order:     { type: integer(1) }
+  relations:
+    Option:         { class: ShopOption, local: option_id, foreign: id, onDelete: cascade }
+    Products:       { class: ShopProduct, refClass: ShopProductOptionValueConn, local: value_id, foreign: product_id }
+ShopCategoryOptionConn:
+  actAs:
+    Timestampable: ~
+  columns:
+    category_id:    { type: integer(4), notnull: true, primary: true }
+    option_id:      { type: integer(4), notnull: true, primary: true }
+  relations:
+    Category:       { class: ShopCategory, local: category_id, foreign: id, foreignAlias: CategoryOptions, onDelete: cascade }
+    Option:         { class: ShopOption, local: option_id, foreign: id, foreignAlias: CategoryOptions, onDelete: cascade }
+ShopProductOptionValueConn:
+  actAs:
+    Timestampable: ~
+  columns:
+    product_id:     { type: integer(4), primary: true }
+    option_id:      { type: integer(4) }
+    value_id:       { type: integer(4), primary: true }
+    quantity:       { type: integer(4) }
+  relations:
+    Product:        { class: ShopProduct, local: product_id, foreign: id, onDelete: cascade }
+    OptionValue:    { class: ShopOptionValue, local: value_id, foreign: id, onDelete: cascade }
+    Option:         { class: ShopOption, local: option_id, foreign: id }
+ShopProduct:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields: [title, intro_text, content]
+  columns:
+    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    category_id:    { type: integer(4), notnull: true }
+    title:          { type: string(100), notnull: true }
+    code:           { type: string(255) }
+    intro_text:     { type: string }
+    content:        { type: string() }
+    cover_photo_id: { type: integer(4) }
+    price:          { type: float() }
+    price_type:     { type: integer(4), default: 0 }
+    product_code:   { type: string(100) }
+    stock_count:    { type: integer(4) }
+    total_add:      { type: integer(4) }
+    total_minus:    { type: integer(4) }
+    created_by:     { type: string(255) }
+    is_active:      { type: boolean, default: true }
+    is_featured:    { type: boolean, default: false }
+    is_submit:      { type: boolean, default: false }
+    is_new:         { type: boolean, default: false }
+    related_content:  { type: integer(4) }
+  relations:
+    OptionValues:   { class: ShopOptionValue, refClass: ShopProductOptionValueConn, local: product_id, foreign: value_id }
+    Category:       { class: ShopCategory, local: category_id, foreign: id }
+    CoverPhoto:     { class: ShopProductImage, local: cover_photo_id, foreign: id }
+    Content:        { local: related_content, foreign: id }
+ShopProductImage:
+  actAs:
+    Timestampable: ~
+  columns:
+    id:             { type: integer(4), unsigned: false, primary: true, autoincrement: true }
+    product_id:     { type: integer(4), notnull: true }
+    img_src:        { type: string(255), notnull: true }
+    is_active:      { type: boolean, default: true }
+    caption:        { type: string(100) }
+  relations:
+    Product:        { class: ShopProduct, local: product_id, foreign: id, foreignAlias: Photos, onDelete: cascade }
+
+ProductComment:
+  actAs:
+    Timestampable: ~
+  columns:
+    user_id:        { type: integer }
+    product_id:     { type: integer(4) }
+    comment:        { type: string(255) }
+    is_block:       { type: boolean, default: false }
+    is_read:        { type: boolean, default: false }
+  relations:
+    ShopProduct:    { local: product_id, foreign: id }
+    sfGuardUser:    { local: user_id, foreign: id }
+
+ProductStock:
+  actAs: [ Timestampable ]
+  columns:
+    product_id:     { type: integer(4), notnull: true }
+    value:          { type: integer(4), notnull: true, default: 0 }
+    date_when:      { type: timestamp }
+    is_add:         { type: boolean, default: true }
+    description:    { type: text }
+    order_id:       { type: integer }
+    created_by:     { type: integer }
+  relations:
+    sfGuardUser:    { local: created_by, foreign: id, foreignAlias: AddedProducts, alias: CreatedUser }
+    ShopProduct:    { local: product_id, foreign: id }
+    ShopOrder:      { local: order_id, foreign: id }
+OrderShipping:
+  actAs: [ Timestampable ]
+  columns:
+    order_id:       { type: integer, notnull: true }
+    address:        { type: string() }
+    user_id:        { type: integer }
+    is_complete:    { type: boolean, default: false }
+  relations:
+    ShopOrder:      { local: order_id, foreign: id }
+    sfGuardUser:    { local: user_id, foreign: id, foreignAlias: ShippingOrder, alias: Customer }
+
+
+# order system
+ShopOrderStatus:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields: [ name, description ]
+  columns:
+    id:                { type: integer(4), notnull: true, autoincrement: true, primary: true }
+    name:              { type: string(50), notnull: true }
+    description:       { type: string(255) }
+    step:              { type: integer(1), unique: true }
+ShopOrder:
+  actAs: [ Timestampable ]
+  columns:
+    invoice_number:    { type: string(50) }
+    invoice_number_report:   { type: string(50) }
+    status_id:         { type: integer(4) }
+    user_id:           { type: integer }
+    shipping_fee:      { type: float }
+    remain_amount:     { type: float }
+    total_amount:      { type: float }
+    product_total_amount: { type: float }
+    product_count:     { type: integer(1) }
+    ip_address:        { type: string(20) }
+  relations:
+    sfGuardUser:       { local: user_id, foreign: id, foreignAlias: MyOrders, alias: Customer }
+    ShopOrderStatus:   { local: status_id, foreign: id }
+ShopOrderItem:
+  actAs: [ Timestampable ]
+  columns:
+    order_id:          { type: integer }
+    quantity:          { type: integer(4), default: 0 }
+    product_id:        { type: integer(4) }
+    unit_price:        { type: float }
+    total_price:       { type: float }
+    sale_log:          { type: string(125) }
+  relations:
+    ShopOrder:         { local: order_id, foreign: id, foreignAlias: OrderItems }
+    ShopProduct:       { local: product_id, foreign: id }
+ShopOrderStatusLog:
+  actAs: [Timestampable]
+  columns:
+    order_id:          { type: integer }
+    status_id:         { type: integer(4) }
+    user_id:           { type: integer }
+    when_date:         { type: timestamp }
+    description:       { type: string(255) }
+  relations:
+    ShopOrder:         { local: order_id, foreign: id, foreignAlias: ShopOrderStatusLogs }
+    ShopOrderStatus:   { local: status_id, foreign: id, foreignAlias: ShopOrderStatusLogs }
+    sfGuardUser:       { local: user_id, foreign: id, foreignAlias: ShopOrderStatusLogs, alias: Customer }
+ShopOrderTransaction:
+  actAs: [Timestampable]
+  columns:
+    order_id:          { type: integer }
+    status_id:         { type: integer(4) }
+    user_id:           { type: integer }
+    code:              { type: string(100) }
+    amount:            { type: float }
+    exchange:          { type: string(20) }
+    description:       { type: string(255) }
+    ip_address:        { type: string(20) }
+    created_by:        { type: integer }
+    updated_by:        { type: integer }
+  relations:
+    ShopOrder:         { local: order_id, foreign: id, foreignAlias: ShopOrderTransactions }
+    sfGuardUser:       { local: user_id, foreign: id, foreignAlias: ShopOrderTransactions, alias: Customer }
+    sfGuardUser:       { local: created_by, foreign: id, foreignAlias: CreatedTransactions, alias: CreateCustomer }
+    sfGuardUser:       { local: updated_by, foreign: id, foreignAlias: UpdatedTransactions, alias: UpdateCustomer }
+
+ShopOrderMessage:
+  actAs:
+    Timestampable: ~
+  columns:
+    order_id:          { type: integer }
+    send_user_id:      { type: integer }
+    message:           { type: string(255) }
+    is_block:          { type: boolean, default: false }
+    is_read:           { type: boolean, default: false }
+  relations:
+    ShopOrder:         { local: order_id, foreign: id, foreignAlias: ShopOrderMessage }
+    sfGuardUser:       { local: send_user_id, foreign: id, foreignAlias: ShopOrderMessage, alias: Sender }
+
+Basket:
+  actAs: [ Timestampable ]
+  columns:
+    session_id:        { type: integer }
+    user_id:           { type: integer }
+    cart_count:        { type: integer, default: 0 }
+    total_price:       { type: float, default: 0 }
+  indexes:
+    section_id_inx:
+      fields: [ session_id ]
+    user_id_inx:
+      fields: [ user_id ]
+  relations:
+    sfGuardUser:       { local: user_id, foreign: id, foreignAlias: MyCarts, alias: Customer, onDelete: 'SET NULL' }
+BasketItem:
+  actAs: [ Timestampable ]
+  columns:
+    basket_id:         { type: integer }
+    session_id:        { type: integer }
+    user_id:           { type: integer }
+    quantity:          { type: integer(4), default: 0 }
+    product_id:        { type: integer(4) }
+    unit_price:        { type: float }
+    total_price:       { type: float }
+    sale_log:          { type: string(125) }
+  relations:
+    Basket:            { local: basket_id, foreign: id, foreignAlias: BasketItems, onDelete: cascade }
+    ShopProduct:       { local: product_id, foreign: id }
+
+ProdContType:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields: [ name ]
+  columns:
+    id:                { type: integer(4), primary: true, autoincrement: true }
+    name:              { type: string(100) }
+    description:       { type: string(255) }
+    sort_order:        { type: integer(1) }
+ProductToProduct:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields:          [ name ]
+  columns:
+    product_id:        { type: integer(4) }
+    relation_product_id: { type: integer(4) }
+    name:              { type: string(100) }
+    sort_order:        { type: integer(1) }
+    type_id:           { type: integer(4) }
+  relations:
+    ShopProduct:       { local: product_id, foreignAlias: ProductToProduct, foreignType: one, alias: Product }
+    ShopProduct:       { local: relation_product_id, foreignAlias: ProductToProduct2, foreignType: one, alias: ProductRelation }
+    ProdContType:      { local: type_id, foreign: id }
+ProductToContent:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields:          [ name ]
+  columns:
+    product_id:        { type: integer(4) }
+    content_id:        { type: integer(4) }
+    type_id:           { type: integer(4) }
+  relations:
+    ShopProduct:       { local: product_id, foreign: id, foreignAlias: ProductToContent }
+    Content:           { local: content_id, foreign: id, foreignAlias: ProductToContent }
+    ProdContType:      { local: type_id, foreign: id }
+
+ShopProductSale:
+  actAs:
+    Timestampable: !
+    I18n:
+      fields:            [ description ]
+  columns:
+    product_id:        { type: integer(4) }
+    type_id:           { type: integer(4)  }
+    percent:           { type: float }
+    sale_value:        { type: float }
+    kg_value:          { type: float }
+    start_date:        { type: timestamp }
+    end_date:          { type: timestamp }
+    description:       { type: string(255) }
+  relations:
+    ShopProduct:       { local: product_id, foreign: id }
+    ShopObjectType:    { local: type_id, foreign: id }
+
+ShopProductBonus:
+  actAs: [ Timestampable ]
+  columns:
+    product_id:        { type: integer(4) }
+    min_interval:      { type: float }
+    percent:           { type: float }
+    sale_value:        { type: float }
+    kg_value:          { type: float }
+    start_date:        { type: timestamp }
+    end_date:          { type: timestamp }
+  relations:
+    ShopProduct:       { local: product_id, foreign: id }
+
+
+ShopObjectType:
+  actAs: [ Timestampable ]
+  columns:
+    id:                { type: integer(4), notnull: true, autoincrement: true, primary: true }
+    object_model_name: { type: string(125) }
+    object_table_name: { type: string(125) }
+    name:              { type: string(125) }
+    extra:             { type: string(255) }
+ShopSale:
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields:            [ description ]
+  columns:
+    type_id:           { type: integer(4)  }
+    object_id:         { type: integer(4) }
+    percent:           { type: float }
+    sale_value:        { type: float }
+    kg_value:          { type: float }
+    start_date:        { type: timestamp }
+    end_date:          { type: timestamp }
+    description:       { type: string(255) }
+  relations:
+    ShopObjectType:    { local: type_id, foreign: id }
+ShopBonus:
+  actAs: [ Timestampable ]
+  columns:
+    type_id:           { type: integer(4) }
+    object_id:         { type: integer(4) }
+    min_interval:      { type: float }
+    percent:           { type: float }
+    sale_value:        { type: float }
+    kg_value:          { type: float }
+    start_date:        { type: timestamp }
+    end_date:          { type: timestamp }
+  relations:
+    ShopObjectType:    { local: type_id, foreign: id }
+ShopCoupon:
+  actAs: [ Timestampable ]
+  columns:
+    type_id:           { type: integer(4) }
+    object_id:         { type: integer(4) }
+    user_id:           { type: integer }
+    percent:           { type: float }
+    sale_value:        { type: float }
+    kg_value:          { type: float }
+    start_date:        { type: timestamp }
+    end_date:          { type: timestamp }
+  relations:
+    ShopObjectType:    { local: type_id, foreign: id }
+    sfGuardUser:       { local: user_id, foreign: id, foreignAlias: MyCoupons, alias: CouponCustomer }
+
+
+ShippingZone:
+  actAs: [ Timestampable ]
+  columns:
+    id:                { type: integer(4), primary: true, autoincrement: true }
+    name:              { type: string(125) }
+    description:       { type: string(255) }
+    value:             { type: float }
+    city:              { type: string(100) }
+    zone:              { type: string(255) }
+
+
+ObjectType:
+  actAs:
+    Timestampable: ~
+  columns:
+    id:                   { type: integer(4), primary: true, autoincrement: true }
+    name:                 { type: string(200), notnull: true }
+    slug:                 { type: string(50), unique: true, notnull: true }
+    object_model_name:    { type: string(100), unique: true }
+    object_table_name:    { type: string(100), unique: true }
+    body:                 { type: string(255) }
+    sentence_format:      { type: string(255) }
+  relations:
+    Actions:              { refClass: ObjectActionConn, class: Action, local: object_type_id, foreign: action_id }
+
+Action:
+  actAs:
+    Timestampable: ~
+  columns:
+    id:                   { type: integer(4), primary: true, autoincrement: true }
+    name:                 { type: string(200), notnull: true }
+    body:                 { type: string(500) }
+  relations:
+    ObjectTypes:          { refClass: ObjectActionConn, class: ObjectType, local: action_id, foreign: object_type_id }
+
+
+
+# ene ni neg uildeliig ilerhiilne
+ObjectActionConn:
+  actAs:
+    Timestampable: ~
+  columns:
+    id:                   { type: integer, autoincrement: true, primary: true }
+    action_id:            { type: integer(4) }
+    object_type_id:       { type: integer(4) }
+    slug:                 { type: string(100), unique: true }
+    sentence_format:      { type: string(255) }
+    is_wall:              { type: boolean, default: false }
+    is_notification:      { type: boolean, default: false }
+  relations:
+    ObjectType:           { local: object_type_id, foreign: id, foreignType: one }
+    Action:               { local: action_id, foreign: id, foreignType: one }
+
+ActivityLog:
+  actAs:
+    Timestampable: ~
+  columns:
+    user_id:               { type: integer }
+    object_action_conn_id: { type: integer }
+    object_type_id:        { type: integer(4) }
+    object_id:             { type: integer }
+    sentence_html:         { type: string(255) }
+  relations:
+    sfGuardUser:           { local: user_id, foreign: id, foreignAlias: ActivityLogs }
+    ObjectActionConn:      { local: object_action_conn_id, foreign: id, foreignAlias: Logs }
+

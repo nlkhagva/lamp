@@ -1,0 +1,53 @@
+<?php $i18n = sfContext::getInstance()->getI18n() ?>
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           gallery
+    theme:                 <?php echo sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_theme")."\n"; ?>
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          gallery
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: 
+        label : Үйлдэл
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }      
+      fields:
+        created_at:        { label: Үүссэн огноо, date_format: dd/MM/yyyy }
+        updated_at:        { label: Засварлагдсан огноо, date_format: dd/MM/yyyy }
+        title:             { label: Гарчиг }
+        description:       { label: Тайлбар }
+      list:
+        title:             <?php echo '"'.$i18n->__("backend.list.title",array(),"sfmaug")."\"\n"; ?>
+        display:           [=id, =title]
+#        batch_actions:
+#          _delete: ~
+#          _purge: purge
+      filter:
+        class: false
+      form:    ~
+      edit:
+        title:             <?php echo '"'.$i18n->__("backend.edit.title",array(),"sfmaug")."\"\n"; ?>
+        display:
+          "Зургийн цомог":    [id, title, _ajax_section_category, description, is_active]
+          "Зурагнууд":        [_photoUpload]
+        actions:
+          _list: ~
+          _delete: ~
+          _save: ~
+          _purge:
+            name: <?php echo $i18n->__("backend.edit.purge",array(),"sfmaug")."\n"; ?>
+            action: purge
+      new:
+        title:             <?php echo '"'.$i18n->__("backend.create.title",array(),"sfmaug")."\"\n"; ?>
+        display:
+          "Зургийн цомог":       [id, title, _ajax_section_category, description]

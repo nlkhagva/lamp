@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd" >
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <header />
+    <body>
+        Search
+        <trans-unit>
+            <source>Search</source>
+            <target>Хайх</target>
+        </trans-unit>
+        <trans-unit>
+            <source>yes or no</source>
+            <target>Тийм эсвэл үгүй</target>
+        </trans-unit>
+      <trans-unit>
+        <source>yes</source>
+        <target>тийм</target>
+      </trans-unit>
+      <trans-unit>
+        <source>no</source>
+        <target>үгүй</target>
+      </trans-unit>
+      
+      <!-- Actions -->
+      <trans-unit>
+        <source>New</source>
+        <target>Шинэ</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Edit</source>
+        <target>Засах</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Delete</source>
+        <target>Устгах</target>
+      </trans-unit>
+      <trans-unit>
+        <source>List</source>
+        <target>Жагсаалт</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Save</source>
+        <target>Хадгалах</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Save and add</source>
+        <target>Хадгалаад шинээр нээх</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Cancel</source>
+        <target>Цуцлах</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Choose an action</source>
+        <target>Үйлдэлээ сонгоно уу</target>
+      </trans-unit>
+      <trans-unit>
+        <source>go</source>
+        <target/>
+      </trans-unit>
+      <trans-unit>
+        <source>Back to list</source>
+        <target>Жагсаалт руу буцах</target>
+      </trans-unit>
+
+      <!-- Filters -->
+      <trans-unit>
+        <source>Reset</source>
+        <target>Цэвэрлэх</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Filter</source>
+        <target>Шүүх</target>
+      </trans-unit>
+
+      <!-- List -->
+      <trans-unit>
+        <source>No result</source>
+        <target>Мэдээлэл байхгүй байна</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Actions</source>
+        <target>Үйлдэл</target>
+      </trans-unit>
+      <trans-unit>
+        <source>(page %%page%%/%%nb_pages%%)</source>
+        <target>(Хуудас %%page%%/%%nb_pages%%)</target>
+      </trans-unit>
+      <trans-unit>
+        <source>asc</source>
+        <target>өсөх</target>
+      </trans-unit>
+      <trans-unit>
+        <source>desc</source>
+        <target>буурах</target>
+      </trans-unit>
+      <trans-unit>
+        <source>[0] no result|[1] 1 result|(1,+Inf] %1% results</source>
+        <target/>
+      </trans-unit>
+
+      <!-- Pagination -->
+      <trans-unit>
+        <source>First page</source>
+        <target>Эхлэл</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Previous page</source>
+        <target>Өмнөх</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Next page</source>
+        <target>Дараахь</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Last page</source>
+        <target>Сүүлийн</target>
+      </trans-unit>
+
+      <!-- Form -->
+      <trans-unit>
+        <source>The item was created successfully.</source>
+        <target>Амжилттай үүсгэлээ.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The item was updated successfully.</source>
+        <target>Амжилттай өөрчиллөө.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The item was created successfully. You can add another one below.</source>
+        <target>Амжилттай хадгаллаа.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The item was updated successfully. You can add another one below.</source>
+        <target/>
+      </trans-unit>
+      <trans-unit>
+        <source>The item has not been saved due to some errors.</source>
+        <target>Хадгалах үед алдаа гарлаа.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The item was deleted successfully.</source>
+        <target>Амжилттай устгалаа.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>You must at least select one item.</source>
+        <target/>
+      </trans-unit>
+      <trans-unit>
+        <source>You must select an action to execute on the selected items.</source>
+        <target/>
+      </trans-unit>
+      <trans-unit>
+        <source>A problem occurs when deleting the selected items as some items do not exist anymore.</source>
+        <target/>
+      </trans-unit>
+      <trans-unit>
+        <source>The selected items have been deleted successfully.</source>
+        <target/>
+      </trans-unit>
+      <trans-unit>
+        <source>A problem occurs when deleting the selected items.</source>
+        <target/>
+      </trans-unit>
+      <trans-unit>
+        <source>is empty</source>
+        <target/>
+      </trans-unit>
+      <trans-unit>
+        <source><![CDATA[from %from_date% to %to_date%]]></source>
+        <target><![CDATA[du %from_date% au %to_date%]]></target>
+      </trans-unit>
+      <trans-unit>
+        <source><![CDATA[from %from_date%<br />to %to_date%]]></source>
+        <target><![CDATA[du %from_date%<br />au %to_date%]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

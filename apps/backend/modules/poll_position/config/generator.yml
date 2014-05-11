@@ -1,0 +1,39 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           PollPosition
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          poll_position
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        label : Үйлдэл
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+
+      fields:
+        name:            { label: Нэр }
+        description:     { label: Тайлбар }
+        symbol:          { label: Тэмдэглэгээ }
+      list:
+        title:   Баннер байрлал Жагсаалт 
+        display: [name, symbol, description]
+
+      filter:
+        display: [name]
+      form:   ~
+      edit:
+        title: Санал асуулга байрлал засварлах хэсэг
+      new:
+        title: Шинэ санал асуулгын байрлал үүсгэх
+

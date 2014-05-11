@@ -1,0 +1,269 @@
+content_rating:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ContentRating
+    module:               content_rating
+    prefix_path:          /content_rating
+    column:               id
+    with_wildcard_routes: true
+
+shipping_zone:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ShippingZone
+    module:               shipping_zone
+    prefix_path:          /shipping_zone
+    column:               id
+    with_wildcard_routes: true
+
+product_stock:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ProductStock
+    module:               product_stock
+    prefix_path:          /product_stock
+    column:               id
+    with_wildcard_routes: true
+
+product_to_content:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ProductToContent
+    module:               product_to_content
+    prefix_path:          /product_to_content
+    column:               id
+    with_wildcard_routes: true
+
+prod_cont_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ProdContType
+    module:               prod_cont_type
+    prefix_path:          /prod_cont_type
+    column:               id
+    with_wildcard_routes: true
+
+shop_order:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ShopOrder
+    module:               order
+    prefix_path:          /order
+    column:               id
+    with_wildcard_routes: true
+
+shop_order_status:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ShopOrderStatus
+    module:               shop_order_status
+    prefix_path:          /shop_order_status
+    column:               id
+    with_wildcard_routes: true
+
+shop_option_value:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ShopOptionValue
+    module:               shop_option_value
+    prefix_path:          /shop_option_value
+    column:               id
+    with_wildcard_routes: true
+
+shop_option:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ShopOption
+    module:               shop_option
+    prefix_path:          /shop_option
+    column:               id
+    with_wildcard_routes: true
+
+shop_category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ShopCategory
+    module:               shop_category
+    prefix_path:          /shop_category
+    column:               id
+    with_wildcard_routes: true
+
+feedback:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Feedback
+    module:               feedback
+    prefix_path:          /feedback
+    column:               id
+    with_wildcard_routes: true
+
+website_config:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                WebsiteConfig
+    module:               website_config
+    prefix_path:          /website_config
+    column:               id
+    with_wildcard_routes: true
+
+poll_position:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                PollPosition
+    module:               poll_position
+    prefix_path:          /poll_position
+    column:               id
+    with_wildcard_routes: true
+
+# poll rules
+poll_list:
+  url:   /poll
+  param: { module: poll, action: list }
+
+poll_new:
+  url:   /poll/new
+  param: { module: poll, action: update }
+
+poll_edit:
+  url:   /poll/edit/:id
+  param: { module: poll, action: update }
+
+poll_delete:
+  url:   /poll/delete/:id
+  param: { module: poll, action: delete }
+
+addAnswer:
+  url:   /poll/addanswer/*
+  param: { module: poll, action: addAnswer }
+removeAnswer:
+  url:   /poll/removeanswer/*
+  param: { module: poll, action: removeData }
+
+
+page_content_page:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Page
+    module:               content_page
+    prefix_path:          /content_page
+    column:               id
+    with_wildcard_routes: true
+
+banner_position:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                BannerPosition
+    module:               banner_position
+    prefix_path:          /banner_position
+    column:               id
+    with_wildcard_routes: true
+
+package:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                package
+    module:               package
+    prefix_path:          /package
+    column:               id
+    with_wildcard_routes: true
+
+shipment_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ShipmentType
+    module:               shipment_type
+    prefix_path:          /shipment_type
+    column:               id
+    with_wildcard_routes: true
+
+shipment_carrier:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ShipmentCarrier
+    module:               shipment_carrier
+    prefix_path:          /shipment_carrier
+    column:               id
+    with_wildcard_routes: true
+
+banner_location:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                BannerLocation
+    module:               bannerLocation
+    prefix_path:          /:sf_culture/bannerLocation
+    column:               id
+    with_wildcard_routes: true
+
+banner:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Banner
+    module:               banner
+    prefix_path:          /:sf_culture/banner
+    column:               id
+    with_wildcard_routes: true
+
+video:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Video
+    module:               video
+    prefix_path:          /:sf_culture/video
+    column:               id
+    with_wildcard_routes: true
+
+content:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Content
+    module:               content
+    prefix_path:          /:sf_culture/content
+    column:               id
+    with_wildcard_routes: true
+
+category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Category
+    module:               category
+    prefix_path:          /:sf_culture/category
+    column:               id
+    with_wildcard_routes: true
+
+section:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Section
+    module:               section
+    prefix_path:          /:sf_culture/section
+    column:               id
+    with_wildcard_routes: true
+
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: public, action: index }
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardAuth, action: password }
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

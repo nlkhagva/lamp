@@ -1,0 +1,43 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ShopCategory
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          shop_category
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        label : Үйлдэл
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+      fields:
+        name:            { label: "Нэр" }
+        description:     { label: "Тайлбар" }
+        parent_id:       { label: "Parent" }
+        sort_order:      { label: "Дэс дугаар" }
+        Parent:        { label: "Parent" }
+      list:
+        title: Барааны ангилалын жагсаалт
+        display: [name, Parent]
+
+      filter:
+        display: [ parent_id ]
+      form:
+        display:
+          Хэл:           [ mn, en ]
+          Тохиргоо:      [ options_list, parent_id, sort_order]
+      edit:
+        title: "Барааны ангилал засварлах хэсэг"
+      new:
+        title: "Шинэ барааны ангилал үүсгэх"
+

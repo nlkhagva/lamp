@@ -1,0 +1,40 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           sfGuardGroup
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sf_guard_group
+    with_doctrine_route:   true
+
+    config:
+      fields: 
+        name:            { label: Нэр }
+        description:     { label: Тайлбар }
+        created_at:      { label: Үүссэн огноо }
+        updated_at:      { label: Засварласан огноо }
+        users_list:      { label: Хэрэглэгчид }
+        permissions_list:      { label: Хандах эрхүүд }
+      actions:
+        label : Үйлдэл
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }      
+      list:
+        title: Групп жагсаалт
+        display: [=name, description, created_at, updated_at]
+
+      form:
+        display: [name, description, users_list, permissions_list]
+
+      edit:
+        title: " \"%%name%%\" групп засах"
+
+      new:
+        title: Шинэ групп

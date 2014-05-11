@@ -1,0 +1,44 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Section
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          section
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: 
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+
+      fields:
+        published:    { label: 'Харуулах уу?' }
+        type_id:      { label: Aнгилалыг сонго }
+        order_id:     { label: Дэс дугаар }
+      list:
+        title: Жагсаалт
+        display: [name, published]
+        batch_actions: {}
+        actions:
+          _new: ~
+#          addSectionType: { label: Шинэ ангилал нэмэх }
+      filter:
+        display: [ published, type_id ]
+      form:
+        display:
+          Хэл:            [ mn, en ]
+          Бусад мэдээлэл: [ published, type_id, order_id ]
+
+      edit:
+        title: "Засварлах хэсэг" 
+      new:
+        title: "Шинээр секци үүсгэх"

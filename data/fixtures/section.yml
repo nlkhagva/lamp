@@ -1,0 +1,95 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+# # You can create multiple files in this directory (i.e. 010_users.yml,
+# # 020_articles.yml, etc) which will be loaded in alphabetical order.
+# # 
+# # See documentation for your ORM's *:data-load task for more information.
+# 
+# User:
+#   fabien:
+#     username: fabien
+#     password: changeme
+#     name:     Fabien Potencier
+#     email:    fabien.potencier@symfony-project.com
+#   kris:
+#     username: Kris.Wallsmith
+#     password: changeme
+#     name:     Kris Wallsmith
+#     email:    kris.wallsmith@symfony-project.com
+SectionType:
+  type1:
+    name: Агуулга
+    description: тайлбар
+  type2:
+    name: Зураг
+    description: тайлбар
+  type3:
+    name: Видео
+    description: тайлбар
+
+Section:
+  section1:
+    Translation:
+      mn:
+        name: Агуулга
+        description: тайлбар
+      en:
+        name: Content
+        description: desc
+    SectionType: type1
+    
+  section_recipes:
+    Translation:
+      mn:
+        name: Жор
+        description: тайлбар
+      en:
+        name: Recipes
+        description: desc
+    SectionType: type1
+  section_live_healthy:
+    Translation:
+      mn:
+        name: Эрүүл мэнд
+        description: тайлбар
+      en:
+        name: Live Healthy
+        description: desc
+    SectionType: type1
+    
+  section2:
+    Translation:
+      mn:
+        name: Зураг 
+        description: тайлбар
+      en:
+        name: Image
+        description: desc
+    SectionType: type2
+
+  section3:
+    Translation:
+      mn:
+        name: Видео
+        description: тайлбар
+      en:
+        name: Video
+        description: desc
+    SectionType: type3
+  section32:
+    Translation:
+      mn:
+        name: album 2
+        description: тайлбар
+      en:
+        name: Video
+        description: desc
+    SectionType: type2
+  section4:
+    Translation:
+      mn:
+        name: Хуудас
+        description: тайлбар
+      en:
+        name: Page
+        description: desc
+    SectionType: type1

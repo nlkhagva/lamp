@@ -1,0 +1,81 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+# # You can create multiple files in this directory (i.e. 010_users.yml,
+# # 020_articles.yml, etc) which will be loaded in alphabetical order.
+# # 
+# # See documentation for your ORM's *:data-load task for more information.
+# 
+# User:
+#   fabien:
+#     username: fabien
+#     password: changeme
+#     name:     Fabien Potencier
+#     email:    fabien.potencier@symfony-project.com
+#   kris:
+#     username: Kris.Wallsmith
+#     password: changeme
+#     name:     Kris Wallsmith
+#     email:    kris.wallsmith@symfony-project.com
+Category:
+  category1:
+    Translation:
+      mn:
+        name: Онцлох жорууд
+        description: тайлбар
+      en:
+        name: Онцлох жорууд
+        description: desc
+    Section: section_recipes
+  category3:
+    Translation:
+      mn:
+        name: Хүүхдийн эрүүл мэнд
+        description: тайлбар
+      en:
+        name: Healthy kids
+        description: desc
+    Section: section_live_healthy
+  category2:
+    Translation:
+      mn:
+        name: Зургын цомог
+        description: тайлбар
+      en:
+        name: Зургын цомог
+        description: desc
+    Section: section2
+  category4:
+    Translation:
+      mn:
+        name: category for page
+        description: тайлбар
+      en:
+        name: category for page
+        description: desc
+    Section: section4
+  category5:
+    Translation:
+      mn:
+        name: video 1
+        description: тайлбар
+      en:
+        name: video 1
+        description: desc
+    Section: section3
+  category6:
+    Translation:
+      mn:
+        name: album cat
+        description: тайлбар
+      en:
+        name: video 2
+        description: desc
+    Section: section32
+  category7:
+    Translation:
+      mn:
+        name: album cat 2
+        description: тайлбар
+      en:
+        name: video 3
+        description: desc
+    Section: section32

@@ -1,0 +1,164 @@
+ShopCategory:
+  cat1:
+    Translation:
+      mn:
+        name: Хатаасан жимс
+      en:
+        name: Dried fruits
+    sort_order: 1
+#    Options: [opt1,opt2,opt3,opt4]
+  cat2:
+    Translation:
+      mn:
+        name: Жимсгэн
+      en:
+        name: Berry
+    sort_order: 1
+    Options: [fruit_type]
+  strawberries:
+    Translation:
+      mn:
+        name: Гүзээлзгэнэ
+      en:
+        name: Strawberries
+    Parent: cat2
+    sort_order: 1
+  blueberries:
+    Translation:
+      mn:
+        name: Нэрс
+      en:
+        name: Blueberries
+    Parent: cat2
+    sort_order: 2
+  raspberries:
+    Translation:
+      mn:
+        name: "Бөөрөлзгөнө /улаан/"
+      en:
+        name: Raspberries
+    Parent: cat2
+    sort_order: 3
+  blackberries:
+    Translation:
+      mn:
+        name: "Бөөрөлзгөнө /хар/"
+      en:
+        name: Blackberries
+    Parent: cat2
+    sort_order: 4
+  apple:
+    Translation:
+      mn:
+        name: "Алим"
+      en:
+        name: Apples
+    Parent: cat1
+    sort_order: 1
+  apricots:
+    Translation:
+      mn:
+        name: "Чангаанз"
+      en:
+        name: Apricots
+    Parent: cat1
+    sort_order: 2
+  
+ShopOption:
+  opt1:
+    Translation:
+      mn:
+        name: Test Option 1 mn
+      en:
+        name: Test Option 1 en
+    type: selectbox
+  fruit_type:
+    Translation:
+      mn:
+        name: Гарал
+      en:
+        name: Гарал
+    type: selectbox
+  opt2:
+    Translation:
+      mn:
+        name: Test Option 2 mn
+      en:
+        name: Test Option 2 en
+    type: checkbox
+  opt3:
+    Translation:
+      mn:
+        name: Test Option 3 mn
+      en:
+        name: Test Option 3 en
+    type: textarea
+  opt4:
+    Translation:
+      mn:
+        name: Test Option 4 mn
+      en:
+        name: Test Option 4 en
+    type: input
+
+ShopOptionValue:
+  ov1:
+    Translation:
+      mn:
+        name: Test Option value 1 mn
+      en:
+        name: Test Option value 1 en
+    Option: opt1
+  fruit_type_list:
+    Translation:
+      mn:
+        name: Органик
+      en:
+        name: Organic
+    Option: fruit_type
+  fruit_type_list_2:
+    Translation:
+      mn:
+        name: Байгалийн гаралтай
+      en:
+        name: Natural
+    Option: fruit_type
+  ov2:
+    Translation:
+      mn:
+        name: Test Option value 2 mn
+      en:
+        name: Test Option value 2 en
+    Option: opt1
+  ov3:
+    Translation:
+      mn:
+        name: Test Option value 3 mn
+      en:
+        name: Test Option value 3 en
+    Option: opt1
+  ov4:
+    Translation:
+      mn:
+        name: Test Option value 4 mn
+      en:
+        name: Test Option value 4 en
+    Option: opt2
+  ov5:
+    Translation:
+      mn:
+        name: Test Option value 5 mn
+      en:
+        name: Test Option value 5 en
+    Option: opt2
+    
+ShopObjectType:
+  obj_type1:
+    object_model_name: ShopProduct
+    object_table_name: shop_product
+    name:       Бараа
+  obj_type2:
+    object_model_name: ShopCategory
+    object_table_name: shop_category
+    name:       Барааны ангилал
+    

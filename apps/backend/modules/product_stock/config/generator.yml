@@ -1,0 +1,44 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ProductStock
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          product_stock
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        label : Үйлдэл
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+
+      fields:
+        ShopProduct:     { label: Бараа }
+        product_id:      { label: Бараа }
+        value:           { label: Тоо ширхэг }
+        date_when:       { label: Хэзээ ирсэн огноо }
+        created_at:      { label: Бүртгэсэн огноо }
+        description:     { label: Тайлбар }
+        is_add:          { label: Орсон }
+        createdUser:     { label: "Хэн?" }
+      list:
+        title: Барааны бүртгэлийн мэдээлэл
+        display: [ShopProduct, value, description, createdUser, created_at]
+
+      filter:
+        display: [ product_id, is_add, date_when ]
+      form: ~
+      edit:
+        title: "Барааны бүртгэлийн мэдээлэл засах"
+      new:
+        title: "Шинээр бараа тоо хэмжээ бүртгэх"
+

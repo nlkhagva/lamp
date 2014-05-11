@@ -1,0 +1,36 @@
+ShopOrderStatus:
+  order_status:
+    Translation:
+      mn:
+        name: Шинэ захиалга
+      en:
+        name: Шинэ захиалга
+    step: 1
+  order_status_2:
+    Translation:
+      mn:
+        name: Админ захиалга баталгаажуулсан
+      en:
+        name: Админ захиалга баталгаажуулсан
+    step: 2
+  order_status_3:
+    Translation:
+      mn:
+        name: Захиалга хүргэгдсэн
+      en:
+        name: Захиалга хүргэгдсэн
+    step: 3
+  order_status_3:
+    Translation:
+      mn:
+        name: Төлбөр бүрэн төлөгдсөн
+      en:
+        name: Төлбөр бүрэн төлөгдсөн
+    step: 3
+  order_status_5:
+    Translation:
+      mn:
+        name: Бүрэн дууссан
+      en:
+        name: Бүрэн дууссан
+    step: 5

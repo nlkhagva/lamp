@@ -1,0 +1,55 @@
+
+#ShopProduct:
+#  product1:
+#    Translation:
+#      mn: 
+#        title: California's Organic Tray, 16oz
+#        content: This organic fruit’s vibrant color and un-oxidized essence is achieved through a natural drying technique scrupulously developed at Bella Viva.
+#      en:
+#        title: California's Organic Tray, 16oz
+#        content: This organic fruit’s vibrant color and un-oxidized essence is achieved through a natural drying technique scrupulously developed at Bella Viva.
+#    price: 22
+#    Category: cat1
+#      
+#  product2:
+#    Translation:
+#      mn: 
+#        title: Organic Dried Tart Apple Rings, 4oz
+#        content: California grown Certified Organic Dried Tart Apple Rings are dried right from the trees! No added preservatives or sweeteners of any kind--simply natural.
+#      en:
+#        title: Organic Dried Tart Apple Rings, 4oz
+#        content: California grown Certified Organic Dried Tart Apple Rings are dried right from the trees! No added preservatives or sweeteners of any kind--simply natural.
+#    price: 4
+#    Category: cat1
+#      
+#  product3:
+#    Translation:
+#      mn: 
+#        title: Organic Dried Pitted Prunes, 1 lb
+#        content: Our organic dried pitted prunes are so sweet and succulent. We see them as a heavenly and convenient way to eat your fruit every day!
+#      en:
+#        title: Organic Dried Pitted Prunes, 1 lb
+#        content: Our organic dried pitted prunes are so sweet and succulent. We see them as a heavenly and convenient way to eat your fruit every day!
+#    price: 6
+#    Category: cat1
+#      
+ProdContType:
+  prod_type_recipes:
+    Translation:
+      mn:
+        name: Жор
+      en:
+        name: Recipes
+  prod_type_healthy:
+    Translation:
+      mn:
+        name: Эрүүл мэнд
+      en:
+        name: Healthy
+  prod_type_recipes:
+    Translation:
+      mn:
+        name: Жор
+      en:
+        name: Recipes
+          

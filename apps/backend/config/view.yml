@@ -1,0 +1,36 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        Удирдлагын хэсэг
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:
+    - /backend/assets/css/bootstrap.min.css
+    - /backend/assets/css/bootstrap-responsive.min.css
+    - /backend/assets/css/font-awesome.min.css
+    - /backend/assets/css/font-awesome.min.css
+    - /backend/assets/css/ace-fonts.css
+    - /backend/assets/css/ace.min.css
+    - /backend/assets/css/ace-responsive.min.css
+    - /backend/assets/css/ace-skins.min.css
+    - main.css
+
+  javascripts:
+    - ckeditor/ckeditor.js
+    - ckfinder/ckfinder.js
+    - jquery.form.js
+    - /backend/assets/js/ace-extra.min.js
+    - /backend/assets/js/bootstrap.min.js
+    - /backend/assets/js/ace-elements.min.js
+    - /backend/assets/js/ace.min.js
+
+  has_layout:     true
+  layout:         layout

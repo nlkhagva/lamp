@@ -1,0 +1,16 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+  .array:
+    product_photo_sizes: [50, 150, 200, 350, 480, 600]
+    content_photo_sizes: [100, 300]
+  product_list_perpage: 20
+  shop_order_perpage: 20
+  ckeditor:
+    basePath:         '/js/ckeditor/'
+  ckfinder:
+    basePath:         '/js/ckfinder/'
+  domain:  'http://freshfruits.mn'
+    

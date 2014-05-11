@@ -1,0 +1,41 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ShippingZone
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          shipping_zone
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: 
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+
+      fields:
+        name:           { label: 'Бүс' }
+        description:    { label: 'Тайлбар' }
+        value:          { label: 'Үнэ' }
+        city:           { label: 'Хот' }
+      list:
+        title: Жагсаалт
+        display: [name, value, city]
+#        batch_actions: {}
+#        actions:
+#          _new: ~
+#          addSectionType: { label: Шинэ ангилал нэмэх }
+      filter:
+        display: [ name ]
+      form: ~
+      edit:
+        title: "Хүргэлтийн бүс засварлах хэсэг" 
+      new:
+        title: "Шинээр хүргэлтийн бүс үүсгэх"

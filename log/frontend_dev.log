@@ -1,0 +1,875 @@
+Aug 26 06:34:40 symfony [info] {sfPatternRouting} Match route "ad" (/ad.:sf_format) for /ad with parameters array (  'module' => 'ad',  'action' => 'index',  'sf_format' => 'html',)
+Aug 26 06:34:40 symfony [info] {myUser} Automatic user logout due to timeout
+Aug 26 06:34:40 symfony [info] {myUser} User is not authenticated
+Aug 26 06:34:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:34:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:34:41 symfony [info] {adActions} Call "adActions->executeIndex()"
+Aug 26 06:34:41 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:34:41 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.type AS a__type, a.category_id AS a__category_id, a.subcategory_id AS a__subcategory_id, a.content AS a__content, a.image AS a__image, a.phone AS a__phone, a.created_by AS a__created_by, a.is_active AS a__is_active, a.is_featured AS a__is_featured, a.activation_code AS a__activation_code, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad a - ()
+Aug 26 06:34:42 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/indexSuccess.php"
+Aug 26 06:34:42 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:34:42 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:34:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:34:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:34:42 symfony [info] {sfWebDebugLogger} Configuration 923.24 ms (12)
+Aug 26 06:34:42 symfony [info] {sfWebDebugLogger} Factories 871.23 ms (1)
+Aug 26 06:34:42 symfony [info] {sfWebDebugLogger} Action "ad/index" 694.19 ms (1)
+Aug 26 06:34:42 symfony [info] {sfWebDebugLogger} Database (Doctrine) 164.35 ms (2)
+Aug 26 06:34:42 symfony [info] {sfWebDebugLogger} View "Success" for "ad/index" 228.45 ms (1)
+Aug 26 06:34:42 symfony [info] {sfWebResponse} Send content (33136 o)
+Aug 26 06:34:46 symfony [info] {sfPatternRouting} Match route "ad_new" (/ad/new.:sf_format) for /ad/new with parameters array (  'module' => 'ad',  'action' => 'new',  'sf_format' => 'html',)
+Aug 26 06:34:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:34:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:34:47 symfony [info] {adActions} Call "adActions->executeNew()"
+Aug 26 06:34:47 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/newSuccess.php"
+Aug 26 06:34:47 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form.php"
+Aug 26 06:34:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:34:47 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:34:47 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:34:47 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:34:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:34:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:34:47 symfony [info] {sfWebDebugLogger} Configuration 12.91 ms (11)
+Aug 26 06:34:47 symfony [info] {sfWebDebugLogger} Factories 71.00 ms (1)
+Aug 26 06:34:47 symfony [info] {sfWebDebugLogger} Action "ad/new" 43.39 ms (1)
+Aug 26 06:34:47 symfony [info] {sfWebDebugLogger} View "Success" for "ad/new" 202.65 ms (1)
+Aug 26 06:34:47 symfony [info] {sfWebDebugLogger} Partial "ad/_form" 164.80 ms (1)
+Aug 26 06:34:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.62 ms (2)
+Aug 26 06:34:47 symfony [info] {sfWebResponse} Send content (50372 o)
+Aug 26 06:34:51 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/ad/jquery.min.map" (/).
+Aug 26 06:34:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Aug 26 06:34:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:34:52 symfony [info] {sfWebDebugLogger} Configuration 5.41 ms (5)
+Aug 26 06:34:52 symfony [info] {sfWebDebugLogger} Factories 68.51 ms (1)
+Aug 26 06:36:04 symfony [info] {sfPatternRouting} Match route "ad_new" (/ad/new.:sf_format) for /ad/new with parameters array (  'module' => 'ad',  'action' => 'new',  'sf_format' => 'html',)
+Aug 26 06:36:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:36:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:36:04 symfony [info] {adActions} Call "adActions->executeNew()"
+Aug 26 06:36:04 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/newSuccess.php"
+Aug 26 06:36:04 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form.php"
+Aug 26 06:36:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:36:04 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:36:04 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:36:04 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:36:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:36:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:36:04 symfony [info] {sfWebDebugLogger} Configuration 14.22 ms (11)
+Aug 26 06:36:04 symfony [info] {sfWebDebugLogger} Factories 55.92 ms (1)
+Aug 26 06:36:04 symfony [info] {sfWebDebugLogger} Action "ad/new" 43.11 ms (1)
+Aug 26 06:36:04 symfony [info] {sfWebDebugLogger} View "Success" for "ad/new" 79.55 ms (1)
+Aug 26 06:36:04 symfony [info] {sfWebDebugLogger} Partial "ad/_form" 57.96 ms (1)
+Aug 26 06:36:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.46 ms (2)
+Aug 26 06:36:04 symfony [info] {sfWebResponse} Send content (50508 o)
+Aug 26 06:36:06 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/ad/jquery.min.map" (/).
+Aug 26 06:36:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Aug 26 06:36:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:36:06 symfony [info] {sfWebDebugLogger} Configuration 9.90 ms (5)
+Aug 26 06:36:06 symfony [info] {sfWebDebugLogger} Factories 51.16 ms (1)
+Aug 26 06:36:06 symfony [info] {sfPatternRouting} Match route "ad_new" (/ad/new.:sf_format) for /ad/new with parameters array (  'module' => 'ad',  'action' => 'new',  'sf_format' => 'html',)
+Aug 26 06:36:06 symfony [info] {sfPatternRouting} Match route "ad_new" (/ad/new.:sf_format) for /ad/new with parameters array (  'module' => 'ad',  'action' => 'new',  'sf_format' => 'html',)
+Aug 26 06:36:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:36:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:36:06 symfony [info] {adActions} Call "adActions->executeNew()"
+Aug 26 06:36:06 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/newSuccess.php"
+Aug 26 06:36:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form.php"
+Aug 26 06:36:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:36:06 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:36:07 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:36:07 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:36:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:36:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:36:07 symfony [info] {sfWebDebugLogger} Configuration 28.95 ms (11)
+Aug 26 06:36:07 symfony [info] {sfWebDebugLogger} Factories 69.45 ms (1)
+Aug 26 06:36:07 symfony [info] {sfWebDebugLogger} Action "ad/new" 60.49 ms (1)
+Aug 26 06:36:07 symfony [info] {sfWebDebugLogger} View "Success" for "ad/new" 103.30 ms (1)
+Aug 26 06:36:07 symfony [info] {sfWebDebugLogger} Partial "ad/_form" 83.42 ms (1)
+Aug 26 06:36:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.67 ms (2)
+Aug 26 06:36:07 symfony [info] {sfWebResponse} Send content (50509 o)
+Aug 26 06:36:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:36:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:36:07 symfony [info] {adActions} Call "adActions->executeNew()"
+Aug 26 06:36:07 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/newSuccess.php"
+Aug 26 06:36:07 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form.php"
+Aug 26 06:36:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:36:07 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:36:07 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:36:07 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:36:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:36:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:36:07 symfony [info] {sfWebDebugLogger} Configuration 24.73 ms (11)
+Aug 26 06:36:07 symfony [info] {sfWebDebugLogger} Factories 324.29 ms (1)
+Aug 26 06:36:07 symfony [info] {sfWebDebugLogger} Action "ad/new" 54.46 ms (1)
+Aug 26 06:36:07 symfony [info] {sfWebDebugLogger} View "Success" for "ad/new" 86.10 ms (1)
+Aug 26 06:36:07 symfony [info] {sfWebDebugLogger} Partial "ad/_form" 69.08 ms (1)
+Aug 26 06:36:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.43 ms (2)
+Aug 26 06:36:07 symfony [info] {sfWebResponse} Send content (50508 o)
+Aug 26 06:36:08 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/ad/jquery.min.map" (/).
+Aug 26 06:36:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Aug 26 06:36:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:36:08 symfony [info] {sfWebDebugLogger} Configuration 7.32 ms (5)
+Aug 26 06:36:08 symfony [info] {sfWebDebugLogger} Factories 72.56 ms (1)
+Aug 26 06:36:41 symfony [info] {sfPatternRouting} Match route "ad_new" (/ad/new.:sf_format) for /ad/new with parameters array (  'module' => 'ad',  'action' => 'new',  'sf_format' => 'html',)
+Aug 26 06:36:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:36:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:36:42 symfony [info] {adActions} Call "adActions->executeNew()"
+Aug 26 06:36:42 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/newSuccess.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_header.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_fieldset.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:36:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:36:42 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_actions.php"
+Aug 26 06:36:42 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_footer.php"
+Aug 26 06:36:42 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:36:42 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:36:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:36:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Configuration 254.71 ms (12)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Factories 105.46 ms (1)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Action "ad/new" 24.18 ms (1)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} View "Success" for "ad/new" 160.19 ms (1)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.37 ms (1)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.13 ms (1)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Partial "ad/_form_header" 1.87 ms (1)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Partial "ad/_form" 112.05 ms (1)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Partial "ad/_form_fieldset" 101.58 ms (1)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Partial "ad/_form_field" 93.62 ms (12)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.58 ms (2)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Partial "ad/_form_actions" 2.04 ms (1)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Partial "ad/_form_footer" 1.20 ms (1)
+Aug 26 06:36:42 symfony [info] {sfWebResponse} Send content (132933 o)
+Aug 26 06:36:42 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/ad/jquery.min.map" (/).
+Aug 26 06:36:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Aug 26 06:36:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Configuration 9.31 ms (5)
+Aug 26 06:36:42 symfony [info] {sfWebDebugLogger} Factories 75.40 ms (1)
+Aug 26 06:37:50 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/ad/jquery.min.map" (/).
+Aug 26 06:37:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Aug 26 06:37:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:37:50 symfony [info] {sfWebDebugLogger} Configuration 11.60 ms (5)
+Aug 26 06:37:50 symfony [info] {sfWebDebugLogger} Factories 51.30 ms (1)
+Aug 26 06:39:13 symfony [info] {sfPatternRouting} Match route "ad_new" (/ad/new.:sf_format) for /ad/new with parameters array (  'module' => 'ad',  'action' => 'new',  'sf_format' => 'html',)
+Aug 26 06:39:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:39:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:39:13 symfony [info] {adActions} Call "adActions->executeNew()"
+Aug 26 06:39:13 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/newSuccess.php"
+Aug 26 06:39:13 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 06:39:13 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 06:39:13 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_header.php"
+Aug 26 06:39:13 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_fieldset.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:14 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:39:14 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_actions.php"
+Aug 26 06:39:14 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_footer.php"
+Aug 26 06:39:14 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:39:14 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:39:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:39:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Configuration 16.91 ms (11)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Factories 41.88 ms (1)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Action "ad/new" 42.53 ms (1)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} View "Success" for "ad/new" 132.22 ms (1)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.47 ms (1)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.56 ms (1)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Partial "ad/_form_header" 1.52 ms (1)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Partial "ad/_form" 101.36 ms (1)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Partial "ad/_form_fieldset" 91.48 ms (1)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Partial "ad/_form_field" 83.02 ms (12)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.59 ms (2)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Partial "ad/_form_actions" 1.90 ms (1)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Partial "ad/_form_footer" 1.41 ms (1)
+Aug 26 06:39:14 symfony [info] {sfWebResponse} Send content (132928 o)
+Aug 26 06:39:14 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/ad/jquery.min.map" (/).
+Aug 26 06:39:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Aug 26 06:39:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Configuration 8.57 ms (5)
+Aug 26 06:39:14 symfony [info] {sfWebDebugLogger} Factories 62.30 ms (1)
+Aug 26 06:39:18 symfony [info] {sfPatternRouting} Match route "ad" (/ad.:sf_format) for /ad with parameters array (  'module' => 'ad',  'action' => 'index',  'sf_format' => 'html',)
+Aug 26 06:39:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:39:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:39:18 symfony [info] {adActions} Call "adActions->executeIndex()"
+Aug 26 06:39:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:39:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM ad a - ()
+Aug 26 06:39:18 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/indexSuccess.php"
+Aug 26 06:39:18 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 06:39:18 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 06:39:18 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_header.php"
+Aug 26 06:39:18 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list.php"
+Aug 26 06:39:18 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_actions.php"
+Aug 26 06:39:18 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_footer.php"
+Aug 26 06:39:18 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters.php"
+Aug 26 06:39:18 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:19 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:39:19 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:19 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:19 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:19 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:19 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:19 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:19 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:19 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:19 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:19 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:19 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:39:19 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:39:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:39:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} Configuration 15.88 ms (11)
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} Factories 40.60 ms (1)
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} Action "ad/index" 231.81 ms (1)
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.05 ms (3)
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} View "Success" for "ad/index" 147.89 ms (1)
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.49 ms (1)
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.65 ms (1)
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} Partial "ad/_list_header" 1.30 ms (1)
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} Partial "ad/_list" 4.18 ms (1)
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} Partial "ad/_list_actions" 1.70 ms (1)
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} Partial "ad/_list_footer" 1.41 ms (1)
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} Partial "ad/_filters" 71.23 ms (1)
+Aug 26 06:39:19 symfony [info] {sfWebDebugLogger} Partial "ad/_filters_field" 58.09 ms (12)
+Aug 26 06:39:19 symfony [info] {sfWebResponse} Send content (118604 o)
+Aug 26 06:39:33 symfony [info] {sfPatternRouting} Match route "ad_new" (/ad/new.:sf_format) for /ad/new with parameters array (  'module' => 'ad',  'action' => 'new',  'sf_format' => 'html',)
+Aug 26 06:39:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:39:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:39:33 symfony [info] {adActions} Call "adActions->executeNew()"
+Aug 26 06:39:33 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/newSuccess.php"
+Aug 26 06:39:33 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 06:39:33 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 06:39:33 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_header.php"
+Aug 26 06:39:33 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form.php"
+Aug 26 06:39:33 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_fieldset.php"
+Aug 26 06:39:33 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:33 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:34 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:39:34 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:39:34 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:34 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:34 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:34 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:34 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:34 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:34 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:34 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:34 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:34 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:39:34 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_actions.php"
+Aug 26 06:39:34 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_footer.php"
+Aug 26 06:39:34 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:39:34 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:39:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:39:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} Configuration 23.10 ms (11)
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} Factories 38.61 ms (1)
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} Action "ad/new" 44.11 ms (1)
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} View "Success" for "ad/new" 133.43 ms (1)
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.60 ms (1)
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.73 ms (1)
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} Partial "ad/_form_header" 1.59 ms (1)
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} Partial "ad/_form" 101.21 ms (1)
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} Partial "ad/_form_fieldset" 91.14 ms (1)
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} Partial "ad/_form_field" 82.77 ms (12)
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.54 ms (2)
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} Partial "ad/_form_actions" 2.11 ms (1)
+Aug 26 06:39:34 symfony [info] {sfWebDebugLogger} Partial "ad/_form_footer" 1.36 ms (1)
+Aug 26 06:39:34 symfony [info] {sfWebResponse} Send content (132974 o)
+Aug 26 06:39:48 symfony [info] {sfPatternRouting} Match route "ad" (/ad.:sf_format) for /ad with parameters array (  'module' => 'ad',  'action' => 'index',  'sf_format' => 'html',)
+Aug 26 06:39:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:39:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:39:48 symfony [info] {adActions} Call "adActions->executeIndex()"
+Aug 26 06:39:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:39:48 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM ad a - ()
+Aug 26 06:39:48 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/indexSuccess.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_header.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_actions.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_footer.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:48 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:48 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:48 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:39:48 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:39:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:39:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} Configuration 17.97 ms (11)
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} Factories 46.31 ms (1)
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} Action "ad/index" 83.66 ms (1)
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.91 ms (3)
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} View "Success" for "ad/index" 117.28 ms (1)
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.63 ms (1)
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.75 ms (1)
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} Partial "ad/_list_header" 1.60 ms (1)
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} Partial "ad/_list" 4.93 ms (1)
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} Partial "ad/_list_actions" 1.74 ms (1)
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} Partial "ad/_list_footer" 1.55 ms (1)
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} Partial "ad/_filters" 75.30 ms (1)
+Aug 26 06:39:48 symfony [info] {sfWebDebugLogger} Partial "ad/_filters_field" 59.58 ms (12)
+Aug 26 06:39:48 symfony [info] {sfWebResponse} Send content (118643 o)
+Aug 26 06:39:57 symfony [info] {sfPatternRouting} Match route "ad_collection" (/ad/:action/action.:sf_format) for /ad/filter/action with parameters array (  'module' => 'ad',  'action' => 'filter',  'sf_format' => 'html',)
+Aug 26 06:39:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:39:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:39:57 symfony [info] {adActions} Call "adActions->executeFilter()"
+Aug 26 06:39:57 symfony [info] {sfFrontWebController} Redirect to "http://negudur.local/frontend_dev.php/ad"
+Aug 26 06:39:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Aug 26 06:39:57 symfony [info] {sfWebResponse} Send header "Location: http://negudur.local/frontend_dev.php/ad"
+Aug 26 06:39:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Configuration 13.39 ms (10)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Factories 41.08 ms (1)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Action "ad/filter" 4.61 ms (1)
+Aug 26 06:39:57 symfony [info] {sfWebResponse} Send content (111 o)
+Aug 26 06:39:57 symfony [info] {sfPatternRouting} Match route "ad" (/ad.:sf_format) for /ad with parameters array (  'module' => 'ad',  'action' => 'index',  'sf_format' => 'html',)
+Aug 26 06:39:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:39:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:39:57 symfony [info] {adActions} Call "adActions->executeIndex()"
+Aug 26 06:39:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:39:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM ad a - ()
+Aug 26 06:39:57 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/indexSuccess.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_header.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_actions.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_footer.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:57 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:39:57 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:39:57 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:39:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:39:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Configuration 13.89 ms (11)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Factories 38.29 ms (1)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Action "ad/index" 73.69 ms (1)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.84 ms (3)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} View "Success" for "ad/index" 106.90 ms (1)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.42 ms (1)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.35 ms (1)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Partial "ad/_list_header" 1.39 ms (1)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Partial "ad/_list" 4.05 ms (1)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Partial "ad/_list_actions" 1.65 ms (1)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Partial "ad/_list_footer" 1.56 ms (1)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Partial "ad/_filters" 70.60 ms (1)
+Aug 26 06:39:57 symfony [info] {sfWebDebugLogger} Partial "ad/_filters_field" 57.17 ms (12)
+Aug 26 06:39:57 symfony [info] {sfWebResponse} Send content (118731 o)
+Aug 26 06:40:06 symfony [info] {sfPatternRouting} Match route "ad" (/ad.:sf_format) for /ad with parameters array (  'module' => 'ad',  'action' => 'index',  'sf_format' => 'html',)
+Aug 26 06:40:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:40:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:40:06 symfony [info] {adActions} Call "adActions->executeIndex()"
+Aug 26 06:40:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:40:06 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM ad a - ()
+Aug 26 06:40:06 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/indexSuccess.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_header.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_actions.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_footer.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:40:06 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:40:06 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:40:06 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:40:06 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:40:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:40:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} Configuration 16.43 ms (11)
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} Factories 44.37 ms (1)
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} Action "ad/index" 68.85 ms (1)
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.81 ms (3)
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} View "Success" for "ad/index" 102.78 ms (1)
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.44 ms (1)
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.43 ms (1)
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} Partial "ad/_list_header" 1.31 ms (1)
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} Partial "ad/_list" 3.75 ms (1)
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} Partial "ad/_list_actions" 1.51 ms (1)
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} Partial "ad/_list_footer" 1.27 ms (1)
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} Partial "ad/_filters" 66.40 ms (1)
+Aug 26 06:40:06 symfony [info] {sfWebDebugLogger} Partial "ad/_filters_field" 53.52 ms (12)
+Aug 26 06:40:07 symfony [info] {sfWebResponse} Send content (118699 o)
+Aug 26 06:41:17 symfony [info] {sfPatternRouting} Match route "ad" (/ad.:sf_format) for /ad with parameters array (  'module' => 'ad',  'action' => 'index',  'sf_format' => 'html',)
+Aug 26 06:41:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:41:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:41:17 symfony [info] {adActions} Call "adActions->executeIndex()"
+Aug 26 06:41:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:41:17 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM ad a - ()
+Aug 26 06:41:17 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/indexSuccess.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_header.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_actions.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_footer.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:41:17 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:41:17 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:41:17 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:41:17 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:41:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:41:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} Configuration 31.80 ms (11)
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} Factories 54.16 ms (1)
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} Action "ad/index" 63.61 ms (1)
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.95 ms (3)
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} View "Success" for "ad/index" 102.77 ms (1)
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.26 ms (1)
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.32 ms (1)
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} Partial "ad/_list_header" 1.14 ms (1)
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} Partial "ad/_list" 3.57 ms (1)
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} Partial "ad/_list_actions" 1.46 ms (1)
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} Partial "ad/_list_footer" 1.17 ms (1)
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} Partial "ad/_filters" 68.09 ms (1)
+Aug 26 06:41:17 symfony [info] {sfWebDebugLogger} Partial "ad/_filters_field" 54.94 ms (12)
+Aug 26 06:41:17 symfony [info] {sfWebResponse} Send content (118731 o)
+Aug 26 06:41:29 symfony [info] {sfPatternRouting} Match route "ad_new" (/ad/new.:sf_format) for /ad/new with parameters array (  'module' => 'ad',  'action' => 'new',  'sf_format' => 'html',)
+Aug 26 06:41:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:41:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:41:29 symfony [info] {adActions} Call "adActions->executeNew()"
+Aug 26 06:41:29 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/newSuccess.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_header.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_fieldset.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:41:29 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:41:29 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_actions.php"
+Aug 26 06:41:29 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_footer.php"
+Aug 26 06:41:29 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:41:29 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:41:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:41:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} Configuration 18.43 ms (11)
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} Factories 40.09 ms (1)
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} Action "ad/new" 42.45 ms (1)
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} View "Success" for "ad/new" 132.74 ms (1)
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.47 ms (1)
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.52 ms (1)
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} Partial "ad/_form_header" 1.53 ms (1)
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} Partial "ad/_form" 101.11 ms (1)
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} Partial "ad/_form_fieldset" 90.96 ms (1)
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} Partial "ad/_form_field" 82.95 ms (12)
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.60 ms (2)
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} Partial "ad/_form_actions" 1.98 ms (1)
+Aug 26 06:41:29 symfony [info] {sfWebDebugLogger} Partial "ad/_form_footer" 1.40 ms (1)
+Aug 26 06:41:29 symfony [info] {sfWebResponse} Send content (133033 o)
+Aug 26 06:43:20 symfony [info] {sfPatternRouting} Match route "ad_new" (/ad/new.:sf_format) for /ad/new with parameters array (  'module' => 'ad',  'action' => 'new',  'sf_format' => 'html',)
+Aug 26 06:43:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:43:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:43:20 symfony [info] {adActions} Call "adActions->executeNew()"
+Aug 26 06:43:20 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/newSuccess.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_header.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_fieldset.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:43:20 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:43:20 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_actions.php"
+Aug 26 06:43:20 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_footer.php"
+Aug 26 06:43:20 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:43:20 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:43:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:43:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} Configuration 20.64 ms (11)
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} Factories 49.37 ms (1)
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} Action "ad/new" 49.24 ms (1)
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} View "Success" for "ad/new" 133.15 ms (1)
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.36 ms (1)
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.31 ms (1)
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} Partial "ad/_form_header" 1.44 ms (1)
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} Partial "ad/_form" 101.35 ms (1)
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} Partial "ad/_form_fieldset" 91.88 ms (1)
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} Partial "ad/_form_field" 83.70 ms (12)
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.54 ms (2)
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} Partial "ad/_form_actions" 1.91 ms (1)
+Aug 26 06:43:20 symfony [info] {sfWebDebugLogger} Partial "ad/_form_footer" 1.35 ms (1)
+Aug 26 06:43:20 symfony [info] {sfWebResponse} Send content (133066 o)
+Aug 26 06:43:24 symfony [info] {sfPatternRouting} Match route "ad" (/ad.:sf_format) for /ad with parameters array (  'module' => 'ad',  'action' => 'index',  'sf_format' => 'html',)
+Aug 26 06:43:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:43:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:43:24 symfony [info] {adActions} Call "adActions->executeIndex()"
+Aug 26 06:43:24 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:43:24 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM ad a - ()
+Aug 26 06:43:24 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/indexSuccess.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_header.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_actions.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_footer.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:24 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:24 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:25 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:43:25 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:43:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:43:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} Configuration 18.10 ms (11)
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} Factories 42.59 ms (1)
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} Action "ad/index" 96.05 ms (1)
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.87 ms (3)
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} View "Success" for "ad/index" 100.62 ms (1)
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.25 ms (1)
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.25 ms (1)
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} Partial "ad/_list_header" 1.23 ms (1)
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} Partial "ad/_list" 3.43 ms (1)
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} Partial "ad/_list_actions" 1.40 ms (1)
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} Partial "ad/_list_footer" 1.27 ms (1)
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} Partial "ad/_filters" 64.97 ms (1)
+Aug 26 06:43:25 symfony [info] {sfWebDebugLogger} Partial "ad/_filters_field" 52.43 ms (12)
+Aug 26 06:43:25 symfony [info] {sfWebResponse} Send content (118703 o)
+Aug 26 06:43:34 symfony [info] {sfPatternRouting} Match route "ad_collection" (/ad/:action/action.:sf_format) for /ad/filter/action with parameters array (  'module' => 'ad',  'action' => 'filter',  'sf_format' => 'html',)
+Aug 26 06:43:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:43:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:43:34 symfony [info] {adActions} Call "adActions->executeFilter()"
+Aug 26 06:43:34 symfony [info] {sfFrontWebController} Redirect to "http://negudur.local/frontend_dev.php/ad"
+Aug 26 06:43:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Aug 26 06:43:34 symfony [info] {sfWebResponse} Send header "Location: http://negudur.local/frontend_dev.php/ad"
+Aug 26 06:43:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:43:34 symfony [info] {sfWebDebugLogger} Configuration 12.35 ms (10)
+Aug 26 06:43:34 symfony [info] {sfWebDebugLogger} Factories 41.79 ms (1)
+Aug 26 06:43:34 symfony [info] {sfWebDebugLogger} Action "ad/filter" 4.15 ms (1)
+Aug 26 06:43:34 symfony [info] {sfWebResponse} Send content (111 o)
+Aug 26 06:43:35 symfony [info] {sfPatternRouting} Match route "ad" (/ad.:sf_format) for /ad with parameters array (  'module' => 'ad',  'action' => 'index',  'sf_format' => 'html',)
+Aug 26 06:43:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 06:43:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 06:43:35 symfony [info] {adActions} Call "adActions->executeIndex()"
+Aug 26 06:43:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 06:43:35 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM ad a - ()
+Aug 26 06:43:35 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/indexSuccess.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_header.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_actions.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_footer.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:35 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:35 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 06:43:35 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:43:35 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 06:43:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 06:43:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} Configuration 13.14 ms (11)
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} Factories 41.07 ms (1)
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} Action "ad/index" 71.20 ms (1)
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.83 ms (3)
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} View "Success" for "ad/index" 95.69 ms (1)
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.17 ms (1)
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.04 ms (1)
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} Partial "ad/_list_header" 0.95 ms (1)
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} Partial "ad/_list" 3.20 ms (1)
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} Partial "ad/_list_actions" 1.37 ms (1)
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} Partial "ad/_list_footer" 0.97 ms (1)
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} Partial "ad/_filters" 65.05 ms (1)
+Aug 26 06:43:35 symfony [info] {sfWebDebugLogger} Partial "ad/_filters_field" 52.84 ms (12)
+Aug 26 06:43:35 symfony [info] {sfWebResponse} Send content (118730 o)
+Aug 26 06:43:47 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/jquery.min.map" (/).
+Aug 26 06:43:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Aug 26 06:43:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 06:43:47 symfony [info] {sfWebDebugLogger} Configuration 5.57 ms (5)
+Aug 26 06:43:47 symfony [info] {sfWebDebugLogger} Factories 41.22 ms (1)
+Aug 26 07:23:43 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/jquery.min.map" (/).
+Aug 26 07:23:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Aug 26 07:23:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 07:23:43 symfony [info] {sfWebDebugLogger} Configuration 36.29 ms (5)
+Aug 26 07:23:43 symfony [info] {sfWebDebugLogger} Factories 759.94 ms (1)
+Aug 26 14:31:47 symfony [info] {sfPatternRouting} Match route "ad" (/ad.:sf_format) for /ad with parameters array (  'module' => 'ad',  'action' => 'index',  'sf_format' => 'html',)
+Aug 26 14:31:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 14:31:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 14:31:52 symfony [info] {adActions} Call "adActions->executeIndex()"
+Aug 26 14:31:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 14:31:58 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM ad a - ()
+Aug 26 14:31:59 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/indexSuccess.php"
+Aug 26 14:32:01 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 14:32:01 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 14:32:01 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_header.php"
+Aug 26 14:32:02 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list.php"
+Aug 26 14:32:02 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_actions.php"
+Aug 26 14:32:02 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_list_footer.php"
+Aug 26 14:32:02 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters.php"
+Aug 26 14:32:02 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 14:32:02 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 14:32:02 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 14:32:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 14:32:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 14:32:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 14:32:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 14:32:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 14:32:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 14:32:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 14:32:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 14:32:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 14:32:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_filters_field.php"
+Aug 26 14:32:03 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 14:32:03 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 14:32:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 14:32:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} Configuration 1129.82 ms (11)
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} Factories 3955.18 ms (1)
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} Action "ad/index" 7048.48 ms (1)
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1696.24 ms (3)
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} View "Success" for "ad/index" 3888.59 ms (1)
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 5.48 ms (1)
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 4.78 ms (1)
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} Partial "ad/_list_header" 5.30 ms (1)
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} Partial "ad/_list" 64.19 ms (1)
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} Partial "ad/_list_actions" 6.57 ms (1)
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} Partial "ad/_list_footer" 7.64 ms (1)
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} Partial "ad/_filters" 1121.15 ms (1)
+Aug 26 14:32:03 symfony [info] {sfWebDebugLogger} Partial "ad/_filters_field" 910.80 ms (12)
+Aug 26 14:32:04 symfony [info] {sfWebResponse} Send content (118164 o)
+Aug 26 14:32:20 symfony [info] {sfPatternRouting} Match route "ad_new" (/ad/new.:sf_format) for /ad/new with parameters array (  'module' => 'ad',  'action' => 'new',  'sf_format' => 'html',)
+Aug 26 14:32:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 14:32:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 14:32:20 symfony [info] {adActions} Call "adActions->executeNew()"
+Aug 26 14:32:21 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/newSuccess.php"
+Aug 26 14:32:21 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 14:32:21 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 14:32:21 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_header.php"
+Aug 26 14:32:21 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form.php"
+Aug 26 14:32:21 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_fieldset.php"
+Aug 26 14:32:21 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:21 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:21 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 14:32:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 14:32:22 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:22 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:22 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:22 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:22 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:22 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:22 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:22 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:22 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:22 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:22 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_actions.php"
+Aug 26 14:32:22 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_footer.php"
+Aug 26 14:32:22 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 14:32:22 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 14:32:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 14:32:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} Configuration 28.02 ms (11)
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} Factories 45.21 ms (1)
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} Action "ad/new" 906.52 ms (1)
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} View "Success" for "ad/new" 707.26 ms (1)
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.77 ms (1)
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.72 ms (1)
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} Partial "ad/_form_header" 1.87 ms (1)
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} Partial "ad/_form" 640.36 ms (1)
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} Partial "ad/_form_fieldset" 288.07 ms (1)
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} Partial "ad/_form_field" 233.39 ms (12)
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.57 ms (2)
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} Partial "ad/_form_actions" 206.82 ms (1)
+Aug 26 14:32:22 symfony [info] {sfWebDebugLogger} Partial "ad/_form_footer" 6.83 ms (1)
+Aug 26 14:32:22 symfony [info] {sfWebResponse} Send content (132870 o)
+Aug 26 14:32:49 symfony [info] {sfPatternRouting} Match route "ad_create" (/ad.:sf_format) for /ad with parameters array (  'module' => 'ad',  'action' => 'create',  'sf_format' => 'html',)
+Aug 26 14:32:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 14:32:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 14:32:49 symfony [info] {adActions} Call "adActions->executeCreate()"
+Aug 26 14:32:49 symfony [info] {adActions} Change template to "CURRENT/new"
+Aug 26 14:32:49 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/newSuccess.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_header.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_fieldset.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 14:32:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:49 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:32:50 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_actions.php"
+Aug 26 14:32:50 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_footer.php"
+Aug 26 14:32:50 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 14:32:50 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 14:32:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 14:32:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} Configuration 22.16 ms (11)
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} Factories 43.38 ms (1)
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} Action "ad/create" 49.52 ms (1)
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} View "Success" for "ad/create" 151.99 ms (1)
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.78 ms (1)
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 2.45 ms (1)
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} Partial "ad/_form_header" 1.78 ms (1)
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} Partial "ad/_form" 116.05 ms (1)
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} Partial "ad/_form_fieldset" 104.84 ms (1)
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} Partial "ad/_form_field" 93.27 ms (12)
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.72 ms (2)
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} Partial "ad/_form_actions" 2.34 ms (1)
+Aug 26 14:32:50 symfony [info] {sfWebDebugLogger} Partial "ad/_form_footer" 1.73 ms (1)
+Aug 26 14:32:50 symfony [info] {sfWebResponse} Send content (140406 o)
+Aug 26 14:32:50 symfony [info] {myUser} Remove old flash messages ("error")
+Aug 26 14:33:03 symfony [info] {sfPatternRouting} Match route "ad_create" (/ad.:sf_format) for /ad with parameters array (  'module' => 'ad',  'action' => 'create',  'sf_format' => 'html',)
+Aug 26 14:33:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 26 14:33:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 26 14:33:03 symfony [info] {adActions} Call "adActions->executeCreate()"
+Aug 26 14:33:03 symfony [info] {adActions} Change template to "CURRENT/new"
+Aug 26 14:33:03 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/newSuccess.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_assets.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_flashes.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_header.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_fieldset.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:33:03 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 26 14:33:03 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.parent_id AS a__parent_id, a.name AS a__name, a.sort_order AS a__sort_order, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM ad_category a - ()
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_field.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_actions.php"
+Aug 26 14:33:03 symfony [info] {sfPartialView} Render "C:\svn\negudur\www\cache\frontend\dev\modules/autoAd/templates/_form_footer.php"
+Aug 26 14:33:03 symfony [info] {sfPHPView} Decorate content with "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 14:33:03 symfony [info] {sfPHPView} Render "C:\svn\negudur\www\apps\frontend\templates/layout.php"
+Aug 26 14:33:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 26 14:33:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} Configuration 16.53 ms (11)
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} Factories 45.42 ms (1)
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} Action "ad/create" 60.24 ms (1)
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} View "Success" for "ad/create" 159.33 ms (1)
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} Partial "ad/_assets" 1.55 ms (1)
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} Partial "ad/_flashes" 1.75 ms (1)
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} Partial "ad/_form_header" 1.64 ms (1)
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} Partial "ad/_form" 123.17 ms (1)
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} Partial "ad/_form_fieldset" 111.43 ms (1)
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} Partial "ad/_form_field" 99.84 ms (12)
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.59 ms (2)
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} Partial "ad/_form_actions" 2.62 ms (1)
+Aug 26 14:33:03 symfony [info] {sfWebDebugLogger} Partial "ad/_form_footer" 1.60 ms (1)
+Aug 26 14:33:03 symfony [info] {sfWebResponse} Send content (136417 o)
+Aug 26 14:33:03 symfony [info] {myUser} Remove old flash messages ("error")

@@ -1,0 +1,19 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/08-Security
+
+default:
+  is_secure: true
+index:
+  credentials: [[admin, order-index, order-update, order-show, order-payment]]
+edit:
+  credentials: [[admin, order-show, order-update, order-payment]]
+update:
+  credentials: [[admin, order-update]]
+ajaxTransaction:
+  credentials: [[admin, order-payment]]
+viewTransactionAjax:
+  credentials: [[admin, order-payment]]
+saveTransaction:
+  credentials: [[admin, order-payment]]
+
+

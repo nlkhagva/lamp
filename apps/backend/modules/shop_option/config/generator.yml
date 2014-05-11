@@ -1,0 +1,42 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ShopOption
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          shop_option
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        label : Үйлдэл
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+      fields:
+        name:            { label: "Нэр" }
+        description:     { label: "Тайлбар" }
+        type:            { label: "Төрөл" }
+        sort_order:      { label: "Дэс дугаар" }
+      list:
+        title: Жагсаалт
+        display: [name, type]
+
+      filter:
+        display: [ type ]
+      form:
+        display:
+          Хэл:           [ mn, en ]
+          Тохиргоо:      [ type, sort_order]
+      edit:
+        title: "\"Option\" засварлах хэсэг"
+      new:
+        title: "Шинэ \"option\" үүсгэх"
+

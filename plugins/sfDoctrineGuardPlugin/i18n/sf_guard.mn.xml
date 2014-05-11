@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd" >
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <header/>
+    <body>
+      <trans-unit>
+        <source>Username</source>
+        <target>Хэрэглэгчийн нэр</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Password</source>
+        <target>Нууц үг</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Remember</source>
+        <target>Санах</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Signin</source>
+        <target>Нэвтрэх</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Forgot your password?</source>
+        <target>Нууц үгээ мартсан уу?</target>
+      </trans-unit>
+      <trans-unit>
+        <source>You don't have the required permission to access this page.</source>
+        <target>Уучлаарай таньд нэвтрэх эрх байхгүй байна</target>
+      </trans-unit>
+      <trans-unit>
+        <source>User list</source>
+        <target>Хэрэглэгчид</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

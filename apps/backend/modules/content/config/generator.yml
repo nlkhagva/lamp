@@ -1,0 +1,61 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Content
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          content
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _new:            { label: "Шинээр үүсгэх" }
+        _delete:         { label: "Устгах", confirm: "Та итгэлтэй байна уу?" }
+        _edit:           { label: "Засах" }
+        _save:           { label: "Хадгалах" }
+        _save_and_add:   { label: "Хадгалах, нэмэх" }
+        _list:           { label: "Жагсаалт руу буцах" }
+
+      fields:
+        published:       { label: 'Харуулах уу?' }
+        is_feature:      { label: 'Онцлох' }
+        section:         { label: 'Секци' }
+        section_id:      { label: 'Секци' }
+        intro_text:      { label: 'Товч текст/орц' }
+        full_text:       { label: 'Бүрэн текст/заавар' }
+        description:     { label: 'Тайлбар/илчлэг' }
+        title:           { label: 'Гарчиг' }
+        categories:      { label: 'Ангилалууд' }
+        categories_list: { label: 'Ангилалууд' }
+        published:       { label: 'Харуулах уу?' }
+        published:       { label: 'Харуулах уу?' }
+        album_id:        { label: 'Зургийн цомог сонгоно уу!' }
+        extra:           { label: 'Дэс дугаар' }
+      list:
+        title:           Агуулгын жагсаалт
+#        layout:          stacked
+        max_per_page:    15
+        sort:            [ created_at, desc]
+        display:         [ title, published , section, _categories  ]
+#        params: |
+#               <h2>%%title%%</h2>
+#               <em>
+#                   %%published%% Секци - %%section%% <br />
+#                   <small>( Ангилалууд - %%categories%% )</small>
+#               </em>
+#               <div>%%intro_text%%</div>
+      filter:
+        display: [ section_id, published, categories_list ]
+
+      form:
+        display:
+          Агуулгын хэсэг:    [ _ajax_section_category,_mn, _en]
+          Тохиргооны хэсэг:  [ is_feature, album_id, image_name, published, created_at, extra ]
+      edit:
+        title: Засварлах хэсэг
+      new:
+        title: "Шинээр агуулга нэмэх"

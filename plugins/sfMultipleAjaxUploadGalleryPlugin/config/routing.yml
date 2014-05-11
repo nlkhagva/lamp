@@ -1,0 +1,164 @@
+gallery:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                gallery
+    module:               gallery
+    prefix_path:          /admin/gallery
+    column:               id
+    with_wildcard_routes: true
+
+photo_ajax_default:
+  url:     /admin/photo/:id/default
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhotoDefault }
+  requirements:
+    sf_method: [post]
+
+photo_ajax_delete:
+  url:     /admin/photo/:id/delete
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhotoDelete }
+  requirements:
+    sf_method: [post]
+
+photo_ajax_crop:
+  url:     /admin/photo/crop/:id
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhotoCrop }
+  requirements:
+    sf_method: [post]
+
+photo_ajax_rotate_left:
+  url:     /admin/photo/rotateLeft/:id
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhoto, type_action:rotate90}
+  requirements:
+    sf_method: [post]
+
+photo_ajax_brightness:
+  url:     /admin/photo/brightness/:id
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhoto, type_action:brightness}
+  requirements:
+    sf_method: [post]
+
+photo_ajax_rotate_right:
+  url:     /admin/photo/rotateRight/:id
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhoto, type_action:rotate270 }
+  requirements:
+    sf_method: [post]
+
+photo_ajax_flip_h:
+  url:     /admin/photo/flip_horizontal/:id
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhoto, type_action:flip_h }
+  requirements:
+    sf_method: [post]
+
+photo_ajax_flip_v:
+  url:     /admin/photo/flip_vertical/:id
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhoto, type_action:flip_v }
+  requirements:
+    sf_method: [post]
+
+photo_ajax_colorize:
+  url:     /admin/photo/colorize/:id
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhoto, type_action:colorize}
+  requirements:
+    sf_method: [post]
+
+photo_ajax_choose_colorize:
+  url:     /admin/photo/choose_colorize/:id
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhoto, type_action:choose_colorize }
+  requirements:
+    sf_method: [post]
+
+photo_ajax_black_and_white:
+  url:     /admin/photo/black_and_white/:id
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhoto, type_action:black_and_white}
+  requirements:
+    sf_method: [post]
+
+photo_ajax_choose_filigrane:
+  url:     /admin/photo/choose_filigrane/:id
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhoto, type_action:choose_filigrane}
+  requirements:
+    sf_method: [post]
+
+photo_ajax_filigrane:
+  url:     /admin/photo/filigrane/:id
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: gallery, action: ajaxPhoto, type_action:filigrane}
+  requirements:
+    sf_method: [post]
+
+photo_crop:
+  url:     /admin/photos/crop
+  param:   { module: photos, action: crop}
+  requirements:
+    sf_method: [post]
+
+photo_reback:
+  url:     /admin/photos/reback
+  param:   { module: photos, action: reback}
+  requirements:
+    sf_method: [post]
+
+gallery_ajax_photo_liste:
+  url:     /admin/gallery/:id/list
+  class:   sfDoctrineRoute
+  options: { model: Gallery, type: object }
+  param:   { module: gallery, action: ajaxPhotoListe }
+  requirements:
+    sf_method: [post]
+
+gallery_upload:
+  url:     /admin/gallery/upload
+  param:   { module: gallery, action: upload}
+
+ajaxPhotoOrder:
+  url:     /admin/gallery/ajaxPhotoOrder/*
+  param:   { module: gallery, action: ajaxPhotoOrder}
+
+photoUpdateTitle:
+  url:     /admin/photos/updateTitle/*
+  param:   { module: photos, action: updateTitle}
+
+photos:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                photos
+    module:               photos
+    prefix_path:          /admin/photos
+    column:               id
+    with_wildcard_routes: true
+#FRONTEND SIDE - portfolios
+showGallery:
+  url:      /portfolio/:slug
+  class:    sfDoctrineRoute
+  options:  { model: gallery, type: object }
+  param:    { module: slideshow, action: show }
+listPortfolio:
+  url:      /portfolios
+  class:    sfDoctrineRoute
+  options:  { model: gallery, type: object }
+  param:    { module: portfolio, action: index }
