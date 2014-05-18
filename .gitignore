@@ -1,8 +1,12 @@
-/cache/*
-/log/*
-/test/*
 /LICENSE
 /README
 /symfony
 /symfony.bat
 /lib/vendor/*
+cache/*
+log/*
+web/uploads/*
+config/databases.yml
+config/propel.ini
+data/sql/*
+web/*Plugin/*
