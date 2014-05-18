@@ -1,0 +1,8 @@
+/cache/*
+/log/*
+/test/*
+/LICENSE
+/README
+/symfony
+/symfony.bat
+/lib/vendor/*
