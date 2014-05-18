@@ -8,7 +8,7 @@
                 <i class="icon-leaf green"></i>
                 <span class="white">Удирдах хэсэг</span>
             </h1>
-            <h4 class="blue">&copy; LAMP </h4>
+            <h4 class="blue">&copy; LAMPY </h4>
         </div>
     </div>
 

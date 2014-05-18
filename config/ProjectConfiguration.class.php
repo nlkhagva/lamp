@@ -17,6 +17,7 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfThumbnailPlugin');
     $this->enablePlugins('sfWidgetFormInputSWFUploadPlugin');
     $this->enablePlugins('sfCaptchaGDPlugin');
-	  
+
+      sfWidgetFormSchema::setDefaultFormFormatterName('bootstrap');
   }
 }

@@ -21,7 +21,7 @@ all:
     portfolio_thumbnails_size: 150
     onDelete: cascade # none or cascade, cascade remove all gallery's files
     path_gallery: <?php echo sfConfig::get("sf_upload_dir")."/gallery/\n" ;?>
-    theme: admin
+    theme: bootstrap
     csstheme: black #black or original
     defaultPicture: /sfMultipleAjaxUploadGalleryPlugin/images/default_picture.png
     path_filigrane: <?php echo sfConfig::get("sf_upload_dir")."/filigrane.png\n"; ?>

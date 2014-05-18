@@ -10,31 +10,23 @@
 
     function ajaxFun(id, cCon, ajaxDiv)
     {
-            $(ajaxDiv).html('<img src="/images/loading20x20.gif">');  
+            $(ajaxDiv).html('<img src="/images/loading20x20.gif" style="height: 15px; margin: 5px;">');
             $(ajaxDiv).load('<?php echo url_for('ajax/choiceCategory'); ?>', "id="+id+"&c_id="+cCon );  
     }
 
     jQuery(function($) {
-        alert();
         ajaxFun(sec_id, cont_id, '#category_ajax');
 
         $('#content_section_id').change(function (){
             ajaxFun($(this).val(), cont_id, '#category_ajax');
         });
-        
      });
 </script>
 
+<?php echo $form['section_id']->renderRow(); ?>
 
-<div class="sf_admin_form_row">
-  <label>Секци</label>
-  <?php echo $form['section_id']->render() ?>
-</div>
-
-<div class="sf_admin_form_row sf_admin_text sf_admin_form_field_categories_list">
-    <div>
-      <label for="content_categories_list">Ангиллууд</label>
-      <div class="content" id="category_ajax">
-      </div>
-  </div>
+<div class="control-group ">
+    <label for="content_categories_list" class="control-label">Ангиллууд</label>
+    <div class="controls control-type-boolean" id="category_ajax">
+    </div>
 </div>

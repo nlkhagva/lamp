@@ -14,7 +14,7 @@ require_once dirname(__FILE__) . '/../lib/galleryGeneratorHelper.class.php';
 class galleryActions extends autoGalleryActions {
     public function preExecute()
     {
-        $this->getUser()->setFlash('mainmenu', 'lk_gallery');
+        $this->getRequest()->setParameter('mainmenu', 'gallery');
         parent::preExecute();
     }
 

@@ -17,7 +17,7 @@
     
     function ajaxFunction(__id, __gall_id)
     {
-        $('#loader').show();
+        $('#category_ajax').html('<img src="/images/loading20x20.gif" style="height: 15px; margin: 5px;">');
 
         $.ajax({
             url: '<?php echo url_for('ajax/choiceVideoCategory') ?>'+'?id='+__id+'&g_id='+__gall_id,
@@ -28,17 +28,12 @@
         });
     }
 </script>
-<div class="sf_admin_form_row">
-  <label>Секци</label>
-  <?php echo $form['section_id']->render() ?>
-  <img src="/images/loading.gif" alt="" id="loader" style="display: none;" />
-</div>
 
 
-<div class="sf_admin_form_row sf_admin_text sf_admin_form_field_categories_list">
-    <div>
-      <label for="video_category_id">Ангилал</label>
-      <div class="gallery" id="category_ajax">
-      </div>
-  </div>
+<?php echo $form['section_id']->renderRow(); ?>
+
+<div class="control-group ">
+    <label for="video_category_id" class="control-label">Ангиллууд</label>
+    <div class="controls control-type-boolean" id="category_ajax">
+    </div>
 </div>

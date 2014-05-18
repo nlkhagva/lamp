@@ -29,18 +29,17 @@
         });
     }
 </script>
-<div class="sf_admin_form_row">
-  <label>Секци</label>
-  <?php echo $form['section_id']->render() ?>
 
-  <img src="/images/loading.gif" alt="" id="loader" style="display: none;" />
-</div>
+<?php echo $form['section_id']->renderRow(); ?>
 
 
-<div class="sf_admin_form_row sf_admin_text sf_admin_form_field_categories_list">
+<div class="control-group">
     <div>
-      <label for="gallery_category_id">Ангилал</label>
-      <div class="gallery" id="category_ajax">
+      <label class="control-label" for="gallery_category_id">Ангилал</label>
+
+      <div class="controls" id="category_ajax">
       </div>
+      <img src="/images/loading.gif" alt="" id="loader" style="display: none;" />
+
   </div>
 </div>

@@ -71,7 +71,7 @@
             </a>
         </li>
         <li <?php echo ($submenu == 'content-index' )?'class="active"':''; ?>>
-            <a href="<?php echo url_for('content/new'); ?>">
+            <a href="<?php echo url_for('content/index'); ?>">
                 <i class="icon-double-angle-right"></i>
                 Мэдээлэл жагсаалт
             </a>
@@ -194,45 +194,60 @@
         </li>
     </ul>
 </li>
-
-<li>
-    <a href="#" class="dropdown-toggle">
-        <i class="icon-cogs "></i>
-        <span class="menu-text"> Тохиргоо </span>
-
-        <b class="arrow icon-angle-down"></b>
+<li <?php echo ($mainmenu == 'gallery')?'class="active"':''; ?>>
+    <a href="<?php echo url_for('@gallery'); ?>">
+        <i class="icon-camera"></i>
+        <span class="menu-text"> Зургийн цомог </span>
     </a>
-
-    <ul class="submenu">
-        <li>
-            <a href="form-elements.html">
-                <i class="icon-double-angle-right"></i>
-                Form Elements
-            </a>
-        </li>
-
-        <li>
-            <a href="form-wizard.html">
-                <i class="icon-double-angle-right"></i>
-                Wizard &amp; Validation
-            </a>
-        </li>
-
-        <li>
-            <a href="wysiwyg.html">
-                <i class="icon-double-angle-right"></i>
-                Wysiwyg &amp; Markdown
-            </a>
-        </li>
-
-        <li>
-            <a href="dropzone.html">
-                <i class="icon-double-angle-right"></i>
-                Dropzone File Upload
-            </a>
-        </li>
-    </ul>
 </li>
+
+<li <?php echo ($mainmenu == 'video')?'class="active"':''; ?>>
+    <a href="<?php echo url_for('video/index'); ?>">
+        <i class="icon-expand"></i>
+        <span class="menu-text"> Видео </span>
+    </a>
+</li>
+
+
+
+<!--<li>-->
+<!--    <a href="#" class="dropdown-toggle">-->
+<!--        <i class="icon-cogs "></i>-->
+<!--        <span class="menu-text"> Тохиргоо </span>-->
+<!---->
+<!--        <b class="arrow icon-angle-down"></b>-->
+<!--    </a>-->
+<!---->
+<!--    <ul class="submenu">-->
+<!--        <li>-->
+<!--            <a href="form-elements.html">-->
+<!--                <i class="icon-double-angle-right"></i>-->
+<!--                Form Elements-->
+<!--            </a>-->
+<!--        </li>-->
+<!---->
+<!--        <li>-->
+<!--            <a href="form-wizard.html">-->
+<!--                <i class="icon-double-angle-right"></i>-->
+<!--                Wizard &amp; Validation-->
+<!--            </a>-->
+<!--        </li>-->
+<!---->
+<!--        <li>-->
+<!--            <a href="wysiwyg.html">-->
+<!--                <i class="icon-double-angle-right"></i>-->
+<!--                Wysiwyg &amp; Markdown-->
+<!--            </a>-->
+<!--        </li>-->
+<!---->
+<!--        <li>-->
+<!--            <a href="dropzone.html">-->
+<!--                <i class="icon-double-angle-right"></i>-->
+<!--                Dropzone File Upload-->
+<!--            </a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</li>-->
 
 </ul><!--/.nav-list-->
 

@@ -15,9 +15,8 @@ class content_pageActions extends autoContent_pageActions
 {
     public function preExecute()
     {
-        $this->getRequest()->setParameter('mainmenu','content');
-        $this->getRequest()->setParameter('submenu','page');
-
+        $this->getRequest()->setParameter('mainmenu', 'content');
+        $this->getRequest()->setParameter('submenu', 'page-index');
         parent::preExecute();
     }
     

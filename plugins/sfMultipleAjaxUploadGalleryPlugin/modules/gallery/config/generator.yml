@@ -3,7 +3,7 @@ generator:
   class: sfDoctrineGenerator
   param:
     model_class:           gallery
-    theme:                 <?php echo sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_theme")."\n"; ?>
+    theme:                 bootstrap
     non_verbose_templates: true
     with_show:             false
     singular:              ~

@@ -53,7 +53,7 @@ generator:
 
       form:
         display:
-          Агуулгын хэсэг:    [ _ajax_section_category,_mn, _en]
+          Агуулгын хэсэг:    [ _ajax_section_category, mn, en]
           Тохиргооны хэсэг:  [ is_feature, album_id, image_name, published, created_at, extra ]
       edit:
         title: Засварлах хэсэг

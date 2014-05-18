@@ -15,7 +15,7 @@ class videoActions extends autoVideoActions
 {
     public function preExecute()
     {
-        $this->getUser()->setFlash('mainmenu', 'lk_video');
+        $this->getRequest()->setParameter('mainmenu', 'video');
         parent::preExecute();
     }
 }

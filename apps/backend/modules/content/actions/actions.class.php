@@ -15,7 +15,16 @@ class contentActions extends autoContentActions
 {
     public function preExecute()
     {
-        $this->getUser()->setFlash('mainmenu', 'content');
+        $this->getRequest()->setParameter('mainmenu', 'content');
         parent::preExecute();
+    }
+
+    public function executeIndex(sfWebRequest $request){
+        $request->setParameter('submenu', 'content-index');
+        parent::executeIndex($request);
+    }
+    public function executeNew(sfWebRequest $request){
+        $request->setParameter('submenu', 'content-new');
+        parent::executeNew($request);
     }
 }

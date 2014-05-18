@@ -23,7 +23,7 @@ generator:
         title:           { label: Гарчиг }
         description:     { label: Тайлбар }
         embed_src:       { label: Embed код }
-        image:           { label: Зурагаа сонгоно уу }
+        image:           { label: Зургаа сонгоно уу }
         file_name:       { label: Файлын нэр оруулна уу }
         section_id:      { label: Секци }
         category_id:     { label: Ангилал }

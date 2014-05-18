@@ -15,7 +15,18 @@ class categoryActions extends autoCategoryActions
 {
     public function preExecute()
     {
-        $this->getUser()->setFlash('mainmenu', 'content');
+        $this->getRequest()->setParameter('mainmenu', 'content');
+        $this->getRequest()->setParameter('submenu', 'category');
         parent::preExecute();
+    }
+    public function executeIndex(sfWebRequest $request)
+    {
+        $request->setParameter('categorymenu', 'index');
+        parent::executeIndex($request);
+    }
+    public function executeNew(sfWebRequest $request)
+    {
+        $request->setParameter('categorymenu', 'new');
+        parent::executeNew($request);
     }
 }

@@ -42,6 +42,11 @@
 </head>
 
 <body>
+<script type="text/javascript">
+    try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+</script>
+
+
 
 <?php include_partial('public/navbar'); ?>
 
@@ -51,6 +56,8 @@
 
     <div class="main-content">
         <?php echo $sf_content; ?>
+
+        <?php include_partial('public/settings') ?>
     </div><!--/.main-content-->
 </div><!--/.main-container-->
 

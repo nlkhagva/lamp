@@ -13,13 +13,20 @@ require_once dirname(__FILE__).'/../lib/sectionGeneratorHelper.class.php';
  */
 class sectionActions extends autoSectionActions
 {
-    public function addSectionType(sfWebRequest $request)
-    {
-        
-    }
     public function preExecute()
     {
-        $this->getUser()->setFlash('mainmenu', 'content');
+        $this->getRequest()->setParameter('mainmenu', 'content');
+        $this->getRequest()->setParameter('submenu', 'section');
         parent::preExecute();
+    }
+    public function executeIndex(sfWebRequest $request)
+    {
+        $request->setParameter('section_menu', 'index');
+        parent::executeIndex($request);
+    }
+    public function executeNew(sfWebRequest $request)
+    {
+        $request->setParameter('section_menu', 'new');
+        parent::executeNew($request);
     }
 }
