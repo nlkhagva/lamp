@@ -10,3 +10,4 @@ config/databases.yml
 config/propel.ini
 data/sql/*
 web/*Plugin/*
+.idea/*
