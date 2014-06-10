@@ -19,10 +19,10 @@ class ContentTable extends Doctrine_Table
     public function getListQuery($category_id = 0,$order = array(), $limit = 0)
     {
         $q = Doctrine_Query::create()
-                    ->from('Content c')->leftJoin('c.CategoryContent o');
+                    ->from('Content c')->leftJoin('c.CategoryContent o')->addWhere('c.published = 1');
 
         if($category_id)
-            $q->where('o.category_id = ?', $category_id);
+            $q->addWhere('o.category_id = ?', $category_id);
 
         if($order){
                 $q->orderBy(implode(', ', $order));
@@ -44,10 +44,10 @@ class ContentTable extends Doctrine_Table
     public function FiltSecQuery($sec_id = 0, $limit = 0,$order = array(), $where = array())
     {
         $q = Doctrine_Query::create()
-                    ->from('Content c');
+                    ->from('Content c')->addWhere('c.published = 1');
 
         if($sec_id)
-            $q->where('c.section_id = ?', $sec_id);
+            $q->addWhere('c.section_id = ?', $sec_id);
 
         if($where){
             foreach($where as $con => $w){

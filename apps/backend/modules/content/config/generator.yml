@@ -34,7 +34,8 @@ generator:
         published:       { label: 'Харуулах уу?' }
         published:       { label: 'Харуулах уу?' }
         album_id:        { label: 'Зургийн цомог сонгоно уу!' }
-        extra:           { label: 'Дэс дугаар' }
+        order_id:        { label: 'Дэс дугаар' }
+        extra:           { lable:  'Хавсаргах файл' }
       list:
         title:           Агуулгын жагсаалт
 #        layout:          stacked
@@ -54,7 +55,7 @@ generator:
       form:
         display:
           Агуулгын хэсэг:    [ _ajax_section_category, mn, en]
-          Тохиргооны хэсэг:  [ is_feature, album_id, image_name, published, created_at, extra ]
+          Тохиргооны хэсэг:  [ is_feature, album_id, image_name, published, created_at, order_id ]
       edit:
         title: Засварлах хэсэг
       new:

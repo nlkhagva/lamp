@@ -75,8 +75,8 @@ class ThumbnailValidatedFile extends sfValidatedFile {
         foreach (sfConfig::get('app_content_photo_sizes') as $size) {
             $upload_directory = sfConfig::get('sf_upload_dir') . '/news/' . $size;
 
-            if (!is_dir($upload_directory)) {
-                mkdir($upload_directory, 0777);
+            if (!file_exists($upload_directory)) {
+                mkdir($upload_directory, 0777, true);
             }
 
             $thumbnail = new sfThumbnail($size);
