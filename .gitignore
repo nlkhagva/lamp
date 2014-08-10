@@ -11,3 +11,4 @@ config/propel.ini
 data/sql/*
 web/*Plugin/*
 .idea/
+.idea/workspace.xml
