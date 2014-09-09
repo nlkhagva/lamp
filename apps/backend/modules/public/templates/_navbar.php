@@ -8,7 +8,7 @@
 <a href="#" class="brand">
     <small>
         <i class="icon-leaf"></i>
-        Удирлагын хэсэг
+        Удирдлагын хэсэг
     </small>
 </a><!--/.brand-->
 
