@@ -33,23 +33,5 @@
 #    price: 6
 #    Category: cat1
 #      
-ProdContType:
-  prod_type_recipes:
-    Translation:
-      mn:
-        name: Жор
-      en:
-        name: Recipes
-  prod_type_healthy:
-    Translation:
-      mn:
-        name: Эрүүл мэнд
-      en:
-        name: Healthy
-  prod_type_recipes:
-    Translation:
-      mn:
-        name: Жор
-      en:
-        name: Recipes
+
           
