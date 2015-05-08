@@ -16,24 +16,6 @@
 #     name:     Kris Wallsmith
 #     email:    kris.wallsmith@symfony-project.com
 Category:
-  category1:
-    Translation:
-      mn:
-        name: Онцлох жорууд
-        description: тайлбар
-      en:
-        name: Онцлох жорууд
-        description: desc
-    Section: section_recipes
-  category3:
-    Translation:
-      mn:
-        name: Хүүхдийн эрүүл мэнд
-        description: тайлбар
-      en:
-        name: Healthy kids
-        description: desc
-    Section: section_live_healthy
   category2:
     Translation:
       mn:
