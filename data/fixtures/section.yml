@@ -37,25 +37,6 @@ Section:
         description: desc
     SectionType: type1
     
-  section_recipes:
-    Translation:
-      mn:
-        name: Жор
-        description: тайлбар
-      en:
-        name: Recipes
-        description: desc
-    SectionType: type1
-  section_live_healthy:
-    Translation:
-      mn:
-        name: Эрүүл мэнд
-        description: тайлбар
-      en:
-        name: Live Healthy
-        description: desc
-    SectionType: type1
-    
   section2:
     Translation:
       mn:
